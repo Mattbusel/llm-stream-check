@@ -1,0 +1,39 @@
+{
+ "id": "anthropic--pydantic-ai--test-anthropic-tool-with-thinking--0",
+ "protocol": "anthropic",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5-5",
+ "core": true,
+ "source": {
+  "repo": "pydantic/pydantic-ai",
+  "commit": "ebcaf6586c12885ea19f4e63cbe306e7527d00e1",
+  "path": "tests/models/cassettes/test_anthropic/test_anthropic_tool_with_thinking.yaml",
+  "interaction": 0,
+  "split_from_multi_response_recording": false,
+  "url": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_anthropic/test_anthropic_tool_with_thinking.yaml"
+ },
+ "features": [
+  "empty_delta",
+  "ping_event",
+  "thinking_block",
+  "tool_call_index_gap",
+  "tool_call_without_arguments",
+  "usage",
+  "usage_restated_in_message_delta"
+ ],
+ "expected": {
+  "tool_calls": [
+   {
+    "id": "toolu_01ScR64hSDRHQDUX7JwLinxz",
+    "name": "get_user_country",
+    "arguments": {}
+   }
+  ],
+  "usage": {
+   "input_tokens": 354,
+   "output_tokens": 71
+  }
+ },
+ "sha256": "3fffc24b5c428a14d13f7debb00d14378a725b5ef524c6bbbfd2fd9b7866cacd",
+ "body": "event: message_start\ndata: {\"type\":\"message_start\",\"message\":{\"model\":\"claude-sonnet-5-5\",\"id\":\"msg_011CgPEct2zfZebj9CcAdSTD\",\"type\":\"message\",\"role\":\"assistant\",\"content\":[],\"container\":null,\"stop_reason\":null,\"stop_sequence\":null,\"stop_details\":null,\"usage\":{\"input_tokens\":354,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":0},\"output_tokens\":2,\"service_tier\":\"standard\",\"inference_geo\":\"global\",\"speed\":\"standard\"},\"diagnostics\":null}            }\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":0,\"content_block\":{\"type\":\"thinking\",\"thinking\":\"\",\"signature\":\"\"}             }\n\nevent: ping\ndata: {\"type\": \"ping\"}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\"I\"}}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\" need to find\"}               }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\" the user's country first before\"} }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\" I can determ\"}}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\"ine its\"}               }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\" largest city,\"}         }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\" so I'll use\"}              }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\" the function to get that information.\"}              }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\"\\n\\n\"}       }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"signature_delta\",\"signature\":\"CAQSxgUKEAgTGAI4AUIIdGhpbmtpbmcSDEOXdivn5hhZerWqEhoMG3hq2hJ19UDzFibgIjDp4KHgxfZhR1fE7myn4D0nm+tAdf/3Jd9h2UMfvHVeAtGli/YSPQQuM/GnGO7r8vMq4wR8Gk9dTumwsdK6dPn0P1JmbpcHn+zGTcL3TlCPRcdk79xo7xwzcxDSyodCYkh9/rSBD47SHV8Gzke2U7Id35qrgf0h4xMtUH+0UXwKaXlpVC6qzYC462bjuYOmRd4b1A+8Oi4tBfRiNFNVGajx20q7vSWuXiIA9EIveVLh50NLZYMkdjRQc0dF3gnoXTaEzS0JB3iibtOCdHWy3hpgWbS6tMTWnaD7GDvnRitYYlWqxPCFzLqrbaSynbvuMmbLcxpCvzkZWLNHmqVvqTNyLctSAiROqjuBMTUEDiaeGVlbW7CCdKhuM6AqWfWla9QRBjAlNZHBEQYpeWESsQH5FNqN/recCFTK3t7D0JfPt+wiS+4IPycXviVoM2zZAFyIeX8eNEVaS4aj4L+TD4GW7KdHxExFM65f5/GZE/zeTaZ3iMygrVTLEQUL5Oj36O6cAPXLa4wUpuT+rFZUidbxCdJ7gfV5nTmG6j74uaOwpwuHpTTpUzJU3VEt1p3d66BiK+ksIdzcLYG2+mWSiw6gt07c35RQz986SvDlBJYistRokcUCz6BETbewV7V9klI2CDAJQK8ENEC+eW1tsj5dBo6+tiwhWAF5lVpeBGIbmcG0a9G6P9V1kXj5ckDbQazXoB/fn8XDSQ0Rjospazn6haAaZHpHPkcUojy35ESU0kEOTuH4CwWsDYjYO5xgtFTTKYF10+Y0TMTFziAzjzmiIM0K5j14y7Ve7nGfyiB343UHsm4y1ptUdBWbzDK4wvcew1rAD+3UFDdmUuoAPy8H5VDwWdI29K82JsySK3n1B5tc1pRkKRgB\"}             }\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"index\":0              }\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":1,\"content_block\":{\"type\":\"text\",\"text\":\"\"}               }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"text_delta\",\"text\":\"I'll start by loo\"}              }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"text_delta\",\"text\":\"king up your\"}     }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"text_delta\",\"text\":\" country.\"}}\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"index\":1           }\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":2,\"content_block\":{\"type\":\"tool_use\",\"id\":\"toolu_01ScR64hSDRHQDUX7JwLinxz\",\"name\":\"get_user_country\",\"input\":{},\"caller\":{\"type\":\"direct\"}}             }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":2,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"\"} }\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"index\":2             }\n\nevent: message_delta\ndata: {\"type\":\"message_delta\",\"delta\":{\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"stop_details\":null,\"container\":null},\"usage\":{\"input_tokens\":354,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":71,\"output_tokens_details\":{\"thinking_tokens\":31}}            }\n\nevent: message_stop\ndata: {\"type\":\"message_stop\"               }\n\n"
+}

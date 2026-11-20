@@ -1,0 +1,39 @@
+{
+ "id": "gemini--llm-gemini--test-tools-with-gemini-3-thought-signatures--0",
+ "protocol": "gemini",
+ "provider": "google",
+ "model": "gemini-3-flash-preview",
+ "core": true,
+ "source": {
+  "repo": "simonw/llm-gemini",
+  "commit": "bb8987c66cb4a76787252ee068a2b60cfa515c35",
+  "path": "tests/cassettes/test_gemini/test_tools_with_gemini_3_thought_signatures.yaml",
+  "interaction": 0,
+  "split_from_multi_response_recording": false,
+  "url": "https://github.com/simonw/llm-gemini/blob/bb8987c66cb4a76787252ee068a2b60cfa515c35/tests/cassettes/test_gemini/test_tools_with_gemini_3_thought_signatures.yaml"
+ },
+ "features": [
+  "thought_signature",
+  "usage",
+  "usage_only_final_chunk"
+ ],
+ "expected": {
+  "tool_calls": [
+   {
+    "id": null,
+    "name": "multiply",
+    "arguments": {
+     "y": 3,
+     "x": 5
+    }
+   }
+  ],
+  "usage": {
+   "input_tokens": 60,
+   "output_tokens": 16,
+   "output_tokens_alt": 48
+  }
+ },
+ "sha256": "f751575d663ef709fed1634cbefc4050688850aa60caae9b947647c56c0d4c72",
+ "body": "data: {\"candidates\":[{\"content\":{\"parts\":[{\"functionCall\":{\"name\":\"multiply\",\"args\":{\"y\":3,\"x\":5}},\"thoughtSignature\":\"Et0BCtoBAXLI2nwMB4momyXTj+K3OPELPDi5Mq6bA5ZHuiKVF9m94gyxd+zdlC+s73nWxHx1ImnA9wPRG1sKMAvENS5i0Bef0VxMS31QE4PbbJw81tSto0OCC+AJdHF0i7x3uHqBuj91gBPwmy3rhAQM+8kxmaF4FeJ0rvICgjIIjG7rBgCE8vOD9Glt/sy3WPKo//jOukERM0rVGAPpMogXNtQbJWUQ8469alaZN67hbYJNaL5XSNcsbsu4ub04B2aFPc6NJld2EWK/enYFPnarMNwobDsSstlzuMygTHQ=\"}],\"role\":\"model\"},\"index\":0}],\"usageMetadata\":{\"promptTokenCount\":60,\"candidatesTokenCount\":16,\"totalTokenCount\":108,\"promptTokensDetails\":[{\"modality\":\"TEXT\",\"tokenCount\":60}],\"thoughtsTokenCount\":32},\"modelVersion\":\"gemini-3-flash-preview\",\"responseId\":\"6XJFadi3PJOx-sAPgJ3S6Qs\"}\n\ndata: {\"candidates\":[{\"content\":{\"parts\":[{\"text\":\"\"}],\"role\":\"model\"},\"finishReason\":\"STOP\",\"index\":0}],\"usageMetadata\":{\"promptTokenCount\":60,\"candidatesTokenCount\":16,\"totalTokenCount\":108,\"promptTokensDetails\":[{\"modality\":\"TEXT\",\"tokenCount\":60}],\"thoughtsTokenCount\":32},\"modelVersion\":\"gemini-3-flash-preview\",\"responseId\":\"6XJFadi3PJOx-sAPgJ3S6Qs\"}\n\n"
+}

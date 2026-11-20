@@ -1,0 +1,38 @@
+{
+ "id": "openai-chat--ai--moonshotai-stream-explicit-tool-call-index-chunks",
+ "protocol": "openai-chat",
+ "provider": "moonshot",
+ "model": "kimi-k2.5",
+ "core": true,
+ "source": {
+  "repo": "vercel/ai",
+  "commit": "beccad37665bbc56afd85542a932e430bdbc4e2e",
+  "path": "packages/moonshotai/src/__fixtures__/moonshotai-stream-explicit-tool-call-index.chunks.txt",
+  "interaction": null,
+  "split_from_multi_response_recording": false,
+  "url": "https://github.com/vercel/ai/blob/beccad37665bbc56afd85542a932e430bdbc4e2e/packages/moonshotai/src/__fixtures__/moonshotai-stream-explicit-tool-call-index.chunks.txt"
+ },
+ "features": [
+  "arguments_split_mid_json",
+  "empty_delta",
+  "usage",
+  "usage_only_final_chunk"
+ ],
+ "expected": {
+  "tool_calls": [
+   {
+    "id": "weather_0",
+    "name": "weather",
+    "arguments": {
+     "location": "San Francisco"
+    }
+   }
+  ],
+  "usage": {
+   "input_tokens": 61,
+   "output_tokens": 19
+  }
+ },
+ "sha256": "c77c1180265ec3e27935866a33b5f270dc84824830a91b616abb5da3c751590c",
+ "body": "data: {\"id\":\"chatcmpl-6a8de8a1fc8c2af91ddf518f\",\"object\":\"chat.completion.chunk\",\"created\":1787685025,\"model\":\"kimi-k2.5\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null}],\"system_fingerprint\":\"fpv0_1c3effa9\"}\n\ndata: {\"id\":\"chatcmpl-6a8de8a1fc8c2af91ddf518f\",\"object\":\"chat.completion.chunk\",\"created\":1787685025,\"model\":\"kimi-k2.5\",\"choices\":[{\"index\":0,\"delta\":{\"reasoning_content\":\"\"},\"finish_reason\":null}],\"system_fingerprint\":\"fpv0_1c3effa9\"}\n\ndata: {\"id\":\"chatcmpl-6a8de8a1fc8c2af91ddf518f\",\"object\":\"chat.completion.chunk\",\"created\":1787685025,\"model\":\"kimi-k2.5\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"id\":\"weather_0\",\"type\":\"function\",\"function\":{\"name\":\"weather\",\"arguments\":\"\"}}]},\"finish_reason\":null}],\"system_fingerprint\":\"fpv0_1c3effa9\"}\n\ndata: {\"id\":\"chatcmpl-6a8de8a1fc8c2af91ddf518f\",\"object\":\"chat.completion.chunk\",\"created\":1787685025,\"model\":\"kimi-k2.5\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"{\\\"\"}}]},\"finish_reason\":null}],\"system_fingerprint\":\"fpv0_1c3effa9\"}\n\ndata: {\"id\":\"chatcmpl-6a8de8a1fc8c2af91ddf518f\",\"object\":\"chat.completion.chunk\",\"created\":1787685025,\"model\":\"kimi-k2.5\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"location\"}}]},\"finish_reason\":null}],\"system_fingerprint\":\"fpv0_1c3effa9\"}\n\ndata: {\"id\":\"chatcmpl-6a8de8a1fc8c2af91ddf518f\",\"object\":\"chat.completion.chunk\",\"created\":1787685025,\"model\":\"kimi-k2.5\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"\\\":\"}}]},\"finish_reason\":null}],\"system_fingerprint\":\"fpv0_1c3effa9\"}\n\ndata: {\"id\":\"chatcmpl-6a8de8a1fc8c2af91ddf518f\",\"object\":\"chat.completion.chunk\",\"created\":1787685025,\"model\":\"kimi-k2.5\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\" \\\"\"}}]},\"finish_reason\":null}],\"system_fingerprint\":\"fpv0_1c3effa9\"}\n\ndata: {\"id\":\"chatcmpl-6a8de8a1fc8c2af91ddf518f\",\"object\":\"chat.completion.chunk\",\"created\":1787685025,\"model\":\"kimi-k2.5\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"San\"}}]},\"finish_reason\":null}],\"system_fingerprint\":\"fpv0_1c3effa9\"}\n\ndata: {\"id\":\"chatcmpl-6a8de8a1fc8c2af91ddf518f\",\"object\":\"chat.completion.chunk\",\"created\":1787685025,\"model\":\"kimi-k2.5\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\" Francisco\"}}]},\"finish_reason\":null}],\"system_fingerprint\":\"fpv0_1c3effa9\"}\n\ndata: {\"id\":\"chatcmpl-6a8de8a1fc8c2af91ddf518f\",\"object\":\"chat.completion.chunk\",\"created\":1787685025,\"model\":\"kimi-k2.5\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"\\\"}\"}}]},\"finish_reason\":null}],\"system_fingerprint\":\"fpv0_1c3effa9\"}\n\ndata: {\"id\":\"chatcmpl-6a8de8a1fc8c2af91ddf518f\",\"object\":\"chat.completion.chunk\",\"created\":1787685025,\"model\":\"kimi-k2.5\",\"choices\":[{\"index\":0,\"delta\":{},\"finish_reason\":\"tool_calls\",\"usage\":{\"prompt_tokens\":61,\"completion_tokens\":19,\"total_tokens\":80,\"completion_tokens_details\":{\"reasoning_tokens\":1}}}],\"system_fingerprint\":\"fpv0_1c3effa9\"}\n\ndata: {\"id\":\"chatcmpl-6a8de8a1fc8c2af91ddf518f\",\"object\":\"chat.completion.chunk\",\"created\":1787685025,\"model\":\"kimi-k2.5\",\"choices\":[],\"usage\":{\"prompt_tokens\":61,\"completion_tokens\":19,\"total_tokens\":80,\"completion_tokens_details\":{\"reasoning_tokens\":1}}}\n\ndata: [DONE]\n\n"
+}

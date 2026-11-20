@@ -1,0 +1,43 @@
+{
+ "id": "anthropic--pydantic-ai--test-ref-sibling-wire-contract-anthropic-structured-dict--0",
+ "protocol": "anthropic",
+ "provider": "anthropic",
+ "model": "claude-haiku-5-5",
+ "core": true,
+ "source": {
+  "repo": "pydantic/pydantic-ai",
+  "commit": "ebcaf6586c12885ea19f4e63cbe306e7527d00e1",
+  "path": "tests/cassettes/test_ref_sibling_wire_contract/test_ref_sibling_wire_contract[anthropic-structured-dict].yaml",
+  "interaction": 0,
+  "split_from_multi_response_recording": false,
+  "url": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/cassettes/test_ref_sibling_wire_contract/test_ref_sibling_wire_contract[anthropic-structured-dict].yaml"
+ },
+ "features": [
+  "arguments_split_mid_json",
+  "empty_delta",
+  "ping_event",
+  "usage",
+  "usage_restated_in_message_delta"
+ ],
+ "expected": {
+  "tool_calls": [
+   {
+    "id": "toolu_01VS8PEQkqXdx3uQUePEjqYb",
+    "name": "final_result",
+    "arguments": {
+     "name": "Ada Lovelace",
+     "address": {
+      "street": "12 Baker Street",
+      "city": "London"
+     }
+    }
+   }
+  ],
+  "usage": {
+   "input_tokens": 607,
+   "output_tokens": 84
+  }
+ },
+ "sha256": "01a3ea7abcd1df4454d675f86bcc1892527e3b4d7ebb9dc5eeac3772bc93ace2",
+ "body": "event: message_start\ndata: {\"type\":\"message_start\",\"message\":{\"model\":\"claude-haiku-5-5\",\"id\":\"msg_011CgPKR5527yxPYQpUNBDrC\",\"type\":\"message\",\"role\":\"assistant\",\"content\":[],\"container\":null,\"stop_reason\":null,\"stop_sequence\":null,\"stop_details\":null,\"usage\":{\"input_tokens\":607,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":0},\"output_tokens\":8,\"service_tier\":\"standard\",\"inference_geo\":\"global\",\"speed\":\"standard\"},\"diagnostics\":null}   }\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":0,\"content_block\":{\"type\":\"tool_use\",\"id\":\"toolu_01VS8PEQkqXdx3uQUePEjqYb\",\"name\":\"final_result\",\"input\":{},\"caller\":{\"type\":\"direct\"}}         }\n\nevent: ping\ndata: {\"type\": \"ping\"}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"\"}       }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"{\\\"name\\\"\"}             }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\": \\\"Ada \"}          }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"Lovelac\"} }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"e\\\"\"}      }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\", \\\"addr\"}   }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"ess\\\": {\"}         }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"\\\"street\"}    }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"\\\":\\\"12 B\"} }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"aker St\"}   }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"reet\\\",\\\"\"}    }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"city\\\":\\\"\"} }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"London\\\"\"}  }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"}}\"}            }\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"index\":0           }\n\nevent: message_delta\ndata: {\"type\":\"message_delta\",\"delta\":{\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"stop_details\":null,\"container\":null},\"usage\":{\"input_tokens\":607,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":84,\"output_tokens_details\":{\"thinking_tokens\":0}}             }\n\nevent: message_stop\ndata: {\"type\":\"message_stop\"              }\n\n"
+}

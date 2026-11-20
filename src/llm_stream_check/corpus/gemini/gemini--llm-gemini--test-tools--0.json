@@ -1,0 +1,36 @@
+{
+ "id": "gemini--llm-gemini--test-tools--0",
+ "protocol": "gemini",
+ "provider": "google",
+ "model": "gemini-2.5-flash",
+ "core": true,
+ "source": {
+  "repo": "simonw/llm-gemini",
+  "commit": "bb8987c66cb4a76787252ee068a2b60cfa515c35",
+  "path": "tests/cassettes/test_gemini/test_tools.yaml",
+  "interaction": 0,
+  "split_from_multi_response_recording": false,
+  "url": "https://github.com/simonw/llm-gemini/blob/bb8987c66cb4a76787252ee068a2b60cfa515c35/tests/cassettes/test_gemini/test_tools.yaml"
+ },
+ "features": [
+  "thought_signature",
+  "tool_call_without_arguments",
+  "usage"
+ ],
+ "expected": {
+  "tool_calls": [
+   {
+    "id": null,
+    "name": "pelican_name_generator",
+    "arguments": {}
+   }
+  ],
+  "usage": {
+   "input_tokens": 32,
+   "output_tokens": 12,
+   "output_tokens_alt": 54
+  }
+ },
+ "sha256": "5a8a3f4ccdffaaba668423aaf7bb7a48cae586e82cdf56b13cda66a0ec081aae",
+ "body": "data: {\"candidates\":[{\"content\":{\"parts\":[{\"text\":\"**Generating Pelican Names**\\n\\nOkay, I'm thinking I should use the `pelican_name_generator` tool to address the user's request. It seems straightforward: call it twice to get two different names for the pet pelican. It's a quick plan.\\n\\n\\n\",\"thought\":true}],\"role\":\"model\"},\"index\":0}],\"usageMetadata\":{\"promptTokenCount\":32,\"totalTokenCount\":74,\"promptTokensDetails\":[{\"modality\":\"TEXT\",\"tokenCount\":32}],\"thoughtsTokenCount\":42,\"serviceTier\":\"standard\"},\"modelVersion\":\"gemini-2.5-flash\",\"responseId\":\"OYpyaqycKd2V_uMP65TsgA0\"}\n\ndata: {\"candidates\":[{\"content\":{\"parts\":[{\"functionCall\":{\"name\":\"pelican_name_generator\",\"args\":{}},\"thoughtSignature\":\"ClgBEU0yD8z3tYzbgjZ1jc6lL1fwUvm9/8OzTwh5uyHd3oc/nSNCBpsRWAFcF+8PscRgXvhCesOjie8txX87NXhaCaqynKKosUEl4w2NSfPT0Ag6Xb03vJK5Cp4BARFNMg9tOjzlvGVeodRcUkd1xZ9L+5Xu3Rl2LKFWOHdmgaXGVBh9/s7Lfg0jYNf7aGBEP7+thoyJE7jXqTvRAkUIRE8/wgObeUXOBM5y9Q66+TBVH++z2rd0J2Thj0jX9crzfhbM4LU5/H167LYHz0sJGlei/Ril/p1LARk70FX94Xun/ekK9ZM7C8ZovhzOYqoVK/AV84+gNm5AKlk=\"}],\"role\":\"model\"},\"finishReason\":\"STOP\",\"index\":0,\"finishMessage\":\"Model generated function call(s).\"}],\"usageMetadata\":{\"promptTokenCount\":32,\"candidatesTokenCount\":12,\"totalTokenCount\":86,\"promptTokensDetails\":[{\"modality\":\"TEXT\",\"tokenCount\":32}],\"thoughtsTokenCount\":42,\"serviceTier\":\"standard\"},\"modelVersion\":\"gemini-2.5-flash\",\"responseId\":\"OYpyaqycKd2V_uMP65TsgA0\"}\n\n"
+}

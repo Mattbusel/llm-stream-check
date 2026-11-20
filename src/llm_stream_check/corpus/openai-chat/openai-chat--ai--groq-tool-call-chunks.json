@@ -1,0 +1,35 @@
+{
+ "id": "openai-chat--ai--groq-tool-call-chunks",
+ "protocol": "openai-chat",
+ "provider": "groq",
+ "model": "llama-3.3-70b-versatile",
+ "core": true,
+ "source": {
+  "repo": "vercel/ai",
+  "commit": "beccad37665bbc56afd85542a932e430bdbc4e2e",
+  "path": "packages/groq/src/__fixtures__/groq-tool-call.chunks.txt",
+  "interaction": null,
+  "split_from_multi_response_recording": false,
+  "url": "https://github.com/vercel/ai/blob/beccad37665bbc56afd85542a932e430bdbc4e2e/packages/groq/src/__fixtures__/groq-tool-call.chunks.txt"
+ },
+ "features": [
+  "empty_delta",
+  "name_and_arguments_in_one_chunk",
+  "usage"
+ ],
+ "expected": {
+  "tool_calls": [
+   {
+    "id": "tk85n1k4m",
+    "name": "weather",
+    "arguments": {}
+   }
+  ],
+  "usage": {
+   "input_tokens": 210,
+   "output_tokens": 15
+  }
+ },
+ "sha256": "2c19cd9ac2805a8039a172b2763da411d2d43b8f8ea9558ad4b98cc144a73fa2",
+ "body": "data: {\"id\":\"chatcmpl-b610d559-f156-4aca-8827-24b4fe6af54f\",\"object\":\"chat.completion.chunk\",\"created\":1770770843,\"model\":\"llama-3.3-70b-versatile\",\"system_fingerprint\":\"fp_f8b414701e\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":null},\"logprobs\":null,\"finish_reason\":null}],\"x_groq\":{\"id\":\"req_01kh52nj5yfcat8hrmvrk2j2hj\",\"seed\":689520654}}\n\ndata: {\"id\":\"chatcmpl-b610d559-f156-4aca-8827-24b4fe6af54f\",\"object\":\"chat.completion.chunk\",\"created\":1770770843,\"model\":\"llama-3.3-70b-versatile\",\"system_fingerprint\":\"fp_f8b414701e\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"id\":\"tk85n1k4m\",\"type\":\"function\",\"function\":{\"name\":\"weather\",\"arguments\":\"{}\"},\"index\":0}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-b610d559-f156-4aca-8827-24b4fe6af54f\",\"object\":\"chat.completion.chunk\",\"created\":1770770843,\"model\":\"llama-3.3-70b-versatile\",\"system_fingerprint\":\"fp_f8b414701e\",\"choices\":[{\"index\":0,\"delta\":{},\"logprobs\":null,\"finish_reason\":\"tool_calls\"}],\"x_groq\":{\"id\":\"req_01kh52nj5yfcat8hrmvrk2j2hj\",\"usage\":{\"queue_time\":0.041520249,\"prompt_tokens\":210,\"prompt_time\":0.010407901,\"completion_tokens\":15,\"completion_time\":0.046601227,\"total_tokens\":225,\"total_time\":0.057009128}},\"usage\":{\"queue_time\":0.041520249,\"prompt_tokens\":210,\"prompt_time\":0.010407901,\"completion_tokens\":15,\"completion_time\":0.046601227,\"total_tokens\":225,\"total_time\":0.057009128}}\n\ndata: [DONE]\n\n"
+}

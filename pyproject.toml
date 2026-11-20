@@ -1,0 +1,60 @@
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[project]
+name = "llm-stream-check"
+version = "0.1.0"
+description = "Your agent didn't forget the tool call. Your stream parser threw it away. Replays 243 recorded OpenAI, Anthropic and Gemini streams through your framework and fails on every dropped or merged tool call and every lost token count."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+authors = [{ name = "Matthew Busel", email = "mattbusel@tensorust.com" }]
+keywords = ["llm", "tool-calling", "function-calling", "streaming", "sse", "agents", "openai", "anthropic", "gemini", "testing"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Typing :: Typed",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/Mattbusel/llm-stream-check"
+Issues = "https://github.com/Mattbusel/llm-stream-check/issues"
+Changelog = "https://github.com/Mattbusel/llm-stream-check/blob/main/CHANGELOG.md"
+Results = "https://github.com/Mattbusel/llm-stream-check/blob/main/docs/results.md"
+
+[project.scripts]
+llm-stream-check = "llm_stream_check.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/llm_stream_check"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "tests", "tools", "harness", "docs", "README.md", "CHANGELOG.md", "LICENSE"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "N", "A"]
+ignore = ["UP007", "UP045", "B023"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+files = ["src/llm_stream_check"]
+exclude = ["src/llm_stream_check/adapters/(?!__init__|_common|reference).*"]
+
+[[tool.mypy.overrides]]
+module = ["llm_stream_check.adapters.*"]
+disallow_untyped_calls = false
+warn_return_any = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

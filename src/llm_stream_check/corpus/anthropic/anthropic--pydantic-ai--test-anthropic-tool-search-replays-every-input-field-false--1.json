@@ -1,0 +1,41 @@
+{
+ "id": "anthropic--pydantic-ai--test-anthropic-tool-search-replays-every-input-field-false--1",
+ "protocol": "anthropic",
+ "provider": "anthropic",
+ "model": "claude-fable-5-2",
+ "core": true,
+ "source": {
+  "repo": "pydantic/pydantic-ai",
+  "commit": "ebcaf6586c12885ea19f4e63cbe306e7527d00e1",
+  "path": "tests/models/anthropic/cassettes/test_tool_search/test_anthropic_tool_search_replays_every_input_field[False].yaml",
+  "interaction": 1,
+  "split_from_multi_response_recording": false,
+  "url": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/anthropic/cassettes/test_tool_search/test_anthropic_tool_search_replays_every_input_field[False].yaml"
+ },
+ "features": [
+  "arguments_split_mid_json",
+  "empty_delta",
+  "thinking_block",
+  "tool_call_index_gap",
+  "usage",
+  "usage_restated_in_message_delta"
+ ],
+ "expected": {
+  "tool_calls": [
+   {
+    "id": "toolu_01DoxrMAWsnytj1nkb7QasDd",
+    "name": "send_email",
+    "arguments": {
+     "to": "ops",
+     "body": "Hi Ops,\n\nThe current stock count for SKU A1 is 14 units.\n\nRegards"
+    }
+   }
+  ],
+  "usage": {
+   "input_tokens": 1387,
+   "output_tokens": 133
+  }
+ },
+ "sha256": "53b331ef38b293227cf59d032d158ab5a7a5d35438cad98538c41af10db3e588",
+ "body": "event: message_start\ndata: {\"type\":\"message_start\",\"message\":{\"model\":\"claude-fable-5-2\",\"id\":\"msg_011Ch92o5niwVttCVnYTkgNt\",\"type\":\"message\",\"role\":\"assistant\",\"content\":[],\"container\":null,\"stop_reason\":null,\"stop_sequence\":null,\"stop_details\":null,\"usage\":{\"input_tokens\":1387,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":0},\"output_tokens\":10,\"service_tier\":\"standard\",\"inference_geo\":\"global\",\"speed\":\"standard\"},\"diagnostics\":null}              }\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":0,\"content_block\":{\"type\":\"tool_search_tool_result\",\"tool_use_id\":\"srvtoolu_01MFphqwPsGSLjeuQmSn6dCo\",\"content\":{\"type\":\"tool_search_tool_search_result\",\"tool_references\":[{\"type\":\"tool_reference\",\"tool_name\":\"send_email\"}]}}             }\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"index\":0   }\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":1,\"content_block\":{\"type\":\"thinking\",\"thinking\":\"\",\"signature\":\"\"}       }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\"\"}       }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"signature_delta\",\"signature\":\"CAQSlgYKEAgTGAI4AUIIdGhpbmtpbmcSDDvXzOvrOgyFOrakHxoMzcZ7nPzborMuT1IDIjCjdlUnm1y8Q0fH14ANsoHUyBFVntBkVkLB2F7FG+awdAmZLRhZAeWagDDrK12+eSsqswXxz4H08UIUOraNCnAKEq6YzDnTcTLUiZwr5pAhcWhA/XCRq1faW7RvY30M2DNkY7kNxC0W0wX4WDV57JpzlnzmHacY/xW1TUj0pNxJ7VhHeijc2vGP8RGy1baiFYISkQt8CkR2vCahnKL19m8i3Nv3fYg48PnrplTFYh/Zyjl9dr42f3wvvkBRtWGeQk14g1Ph4Ep+cE8m3m0ApPtdnW+AAtr/kPGHlGzY67gszhk1Kc3ZQrRd0e8whpYNtAaQx62ZxjHHzpj69+HUqhkGYk4lKR2HLNr9o8aPIolTUHfn/Yvnb6UwIde5X3hcsPRL1KWwQj74UYnCP1qLzNzkyeTujNoN1lhOWHjuY62VsJCEOoCyHOtXh4yJFHA7DJqwKXt95to48GT9L5PT3koMevcSp69u+N2OnLUYVD0JUoYMicmO8AYPCE6MPPsnmvtLC2N+QFpicUp+2/omaO9D2JXVL/TXkhSJI/5y8hY9qXtnvC/9eFPZRGAhWbX7zRy1TTxr596BfkPEFLueBlkuFl9IXeF8u+GN+9v8UQb471Uzfy//zJ9NxkaYTQYbAQXLTzEH04kBwctkfq5CR5Ek3F8CoiVaVIWJ148lDs9LcUAmaQjfFb8tzJMXsguF7BHcBEW6GCU4ThTdXVxQ5D1PzZsP0SWSVDSL4WFeHKQ8/C3n01jDaJCRZuIsc0kG9JF0CILL99IZgguvg7zk+uH/lidn6GZo8M3dwVz9q0BkunZF2m0MQeEm8ucS/JozZ88qeCEJlJD+6QsimdC8zW7SMJEhULudaXJXdoBI2YUZAnmkdoB122uP3tjHi3oJrS7AxI1vahQuldFRFhBgiimVUbiLHnX9acy/p/4LwuhLMI26bXziodDpAHo9g8hE60BkR2j9JPT9HuxgCcRPgzfATcrs6TIsGAE=\"}           }\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"index\":1   }\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":2,\"content_block\":{\"type\":\"tool_use\",\"id\":\"toolu_01DoxrMAWsnytj1nkb7QasDd\",\"name\":\"send_email\",\"input\":{},\"caller\":{\"type\":\"direct\"}} }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":2,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"\"}         }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":2,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"{\\\"to\\\": \"}           }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":2,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"\\\"ops\\\"\"}         }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":2,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\", \\\"body\"}            }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":2,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"\\\": \\\"Hi \"}     }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":2,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"Ops,\\\\n\\\\\"} }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":2,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"nThe cu\"}             }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":2,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"rrent s\"}     }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":2,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"tock co\"}              }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":2,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"unt for\"}}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":2,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\" SKU A1\"}   }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":2,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\" is 14 \"}         }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":2,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"units.\\\\\"}               }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":2,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"n\\\\nRega\"}            }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":2,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"rds\\\"}\"}    }\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"index\":2     }\n\nevent: message_delta\ndata: {\"type\":\"message_delta\",\"delta\":{\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"stop_details\":null,\"container\":null},\"usage\":{\"input_tokens\":1387,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":133,\"output_tokens_details\":{\"thinking_tokens\":34},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0}}        }\n\nevent: message_stop\ndata: {\"type\":\"message_stop\"  }\n\n"
+}

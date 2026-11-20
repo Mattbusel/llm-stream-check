@@ -1,0 +1,41 @@
+{
+ "id": "anthropic--pydantic-ai--test-anthropic-enum-member-docstrings-reach-the-wire--0",
+ "protocol": "anthropic",
+ "provider": "anthropic",
+ "model": "claude-haiku-5-5",
+ "core": true,
+ "source": {
+  "repo": "pydantic/pydantic-ai",
+  "commit": "ebcaf6586c12885ea19f4e63cbe306e7527d00e1",
+  "path": "tests/models/cassettes/test_anthropic/test_anthropic_enum_member_docstrings_reach_the_wire.yaml",
+  "interaction": 0,
+  "split_from_multi_response_recording": false,
+  "url": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_anthropic/test_anthropic_enum_member_docstrings_reach_the_wire.yaml"
+ },
+ "features": [
+  "arguments_split_mid_json",
+  "empty_delta",
+  "ping_event",
+  "thinking_block",
+  "tool_call_index_gap",
+  "usage",
+  "usage_restated_in_message_delta"
+ ],
+ "expected": {
+  "tool_calls": [
+   {
+    "id": "toolu_01CUDwa8q8uKDMyTYQK4fd4W",
+    "name": "set_priority",
+    "arguments": {
+     "priority": "high"
+    }
+   }
+  ],
+  "usage": {
+   "input_tokens": 747,
+   "output_tokens": 88
+  }
+ },
+ "sha256": "5b66a329651b2bbac24151fd05783bf0170a4ca8fbd6d9f6858d2dc6b348ee7f",
+ "body": "event: message_start\ndata: {\"type\":\"message_start\",\"message\":{\"model\":\"claude-haiku-5-5\",\"id\":\"msg_011Cgf2dBMTkpwWMfRGnkHhA\",\"type\":\"message\",\"role\":\"assistant\",\"content\":[],\"container\":null,\"stop_reason\":null,\"stop_sequence\":null,\"stop_details\":null,\"usage\":{\"input_tokens\":747,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":0},\"output_tokens\":2,\"service_tier\":\"standard\",\"inference_geo\":\"global\",\"speed\":\"standard\"},\"diagnostics\":null}          }\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":0,\"content_block\":{\"type\":\"thinking\",\"thinking\":\"\",\"signature\":\"\"} }\n\nevent: ping\ndata: {\"type\": \"ping\"}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\"\"}           }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"signature_delta\",\"signature\":\"CAQShQYKEAgTGAI4AUIIdGhpbmtpbmcSDHMWsRlVrfqFSgq/+BoMk/zZ/APNrrMd0Y4oIjDNja+yNyUkL26AoSFIgw+aOvtJpzjZdXS349q5qpO0Rry6uJFywYq/jZLcntd93swqogWAjCYp2akdbVF0xURCNhSb7Bk8yvQyOgkxtCWIUEeEtk/NKyY0oXcMeeDgFa/8+VhKIz4FhxVS3Ssv5tinBbV2nv1SpHTrRsbJFDfH9LXC/415qpNweM6tlgeDO8J2M65BhzleyBgjj9DezIxPi5Toc+hWD7AKKPCTCT8eOlhO7znOEIHYPIPPtm0Rqxckit3J2mZXlRxkYjfuKQUh8UBtoeMd4SpccQOwkEgZ4XC7xF1gpkav9x8khJ8dytgVZL0XMl4Ug0U9czXpKeWZUBXfAxCl2P8osJ5p5h3XeO7AKnFhOluOfSyzu/m/lheYHTs29g1xBiDZ7kq4/Hl5UKBH3Hl8jMTOiEHu7ZAegsKp3q0Ga/SXpqtVD0dVIdF70CqwuLEaAH4IPZlP8QRsq5JxA46CPHVpWw6dsoxT+QM3qwAeCWH6LNKrBtSrWuuaQFY+UcD6K6TOmwkB4j/ebaMUGIzjdBebOF4j3eitp12B98B1CoavUUpvRF8S/BZ7TqGHXC+J1W4HAsqBSoXwogfxRT4XgIc0vncYHjn5iwOdA2kdSQB9Xy85CKc1VofnYiW1NiHnPI1QJrTWr5MesyfFpqXem4n+8C39OWQaZEyQjd92OOkHYEXPoC9krs2M82Mf+jxE1X3BI9KAZhl1+YGM7+itWV26Js5IHIBNv9eg0lXCaKfJsYOMuin1otZFBBbGBf4XXXkldPoHVxhc/3aDMA+LeYz86DmOqb3UMiogzxKcrYxJ8AWOFliyb7Dat/E+9CFMZUPQupFw5C2pUFzmBGwut9YAA5u+Y3shUvDVpBB8Zm10gOTBd6SXGnhQX35TqZacWTAC9Mc1uWWa6g4cTEn4cxMOwylPR2f/3NRY//pAYFfNEXEFsS3a+c6AkOACzhgB\"}        }\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"index\":0       }\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":1,\"content_block\":{\"type\":\"tool_use\",\"id\":\"toolu_01CUDwa8q8uKDMyTYQK4fd4W\",\"name\":\"set_priority\",\"input\":{},\"caller\":{\"type\":\"direct\"}}           }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"\"}         }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"{\\\"prior\"}      }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"ity\\\": \\\"\"}           }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"high\\\"}\"}              }\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"index\":1    }\n\nevent: message_delta\ndata: {\"type\":\"message_delta\",\"delta\":{\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"stop_details\":null,\"container\":null},\"usage\":{\"input_tokens\":747,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":88,\"output_tokens_details\":{\"thinking_tokens\":38}}               }\n\nevent: message_stop\ndata: {\"type\":\"message_stop\"   }\n\n"
+}

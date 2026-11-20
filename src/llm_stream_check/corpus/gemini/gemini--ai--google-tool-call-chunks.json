@@ -1,0 +1,38 @@
+{
+ "id": "gemini--ai--google-tool-call-chunks",
+ "protocol": "gemini",
+ "provider": "google",
+ "model": "gemini-3-pro-preview",
+ "core": true,
+ "source": {
+  "repo": "vercel/ai",
+  "commit": "beccad37665bbc56afd85542a932e430bdbc4e2e",
+  "path": "packages/google/src/__fixtures__/google-tool-call.chunks.txt",
+  "interaction": null,
+  "split_from_multi_response_recording": false,
+  "url": "https://github.com/vercel/ai/blob/beccad37665bbc56afd85542a932e430bdbc4e2e/packages/google/src/__fixtures__/google-tool-call.chunks.txt"
+ },
+ "features": [
+  "thought_signature",
+  "usage",
+  "usage_only_final_chunk"
+ ],
+ "expected": {
+  "tool_calls": [
+   {
+    "id": null,
+    "name": "weather",
+    "arguments": {
+     "location": "San Francisco"
+    }
+   }
+  ],
+  "usage": {
+   "input_tokens": 29,
+   "output_tokens": 15,
+   "output_tokens_alt": 60
+  }
+ },
+ "sha256": "49cc277e882012b07e7b5c306cdff8438617ddabbe0c2580670f0d5c5de4571d",
+ "body": "data: {\"candidates\":[{\"content\":{\"parts\":[{\"functionCall\":{\"name\":\"weather\",\"args\":{\"location\":\"San Francisco\"}},\"thoughtSignature\":\"EqUCCqICAb4+9vsh8Pd5taZVoPzSvjWWwzBrvhEQWBLCGa7IdY8FBMm7Z6dCKFU3Ft0la15gF7RaHe1NlPRygQec0bFwPDfMwGcUOMNiJiNIKxusCs4ejCZRuouNYQ4etEIt7CujEUHiILLfZXSJZYhs4UCrD2bLqPq0sE0lWgYJnzHkkKUOnMsA2hKffAhtF4DWn5INYj8pPssvch/2VpDFW2F9XSE04zLDzkIWF2eztJX50Y0lTehRZC3FW7fOrXCzGx+PwdataD6eXlF5O1zn+86XtmktOs2DEp4o1PMvXFFAXe8GGvPt8Idf3UtHMq7AsapwMW9sjiKj+FJk54m+9LMTSaj7C86smfvoQryYBEHTVazr1bEnpl4bPG5JUtm2yAMkHj4=\"}],\"role\":\"model\"},\"index\":0}],\"usageMetadata\":{\"promptTokenCount\":29,\"candidatesTokenCount\":15,\"totalTokenCount\":89,\"promptTokensDetails\":[{\"modality\":\"TEXT\",\"tokenCount\":29}],\"thoughtsTokenCount\":45},\"modelVersion\":\"gemini-3-pro-preview\",\"responseId\":\"b36LacjwM668nsEP2tbsgQQ\"}\n\ndata: {\"candidates\":[{\"content\":{\"parts\":[{\"text\":\"\"}],\"role\":\"model\"},\"finishReason\":\"STOP\",\"index\":0}],\"usageMetadata\":{\"promptTokenCount\":29,\"candidatesTokenCount\":15,\"totalTokenCount\":89,\"promptTokensDetails\":[{\"modality\":\"TEXT\",\"tokenCount\":29}],\"thoughtsTokenCount\":45},\"modelVersion\":\"gemini-3-pro-preview\",\"responseId\":\"b36LacjwM668nsEP2tbsgQQ\"}\n\n"
+}

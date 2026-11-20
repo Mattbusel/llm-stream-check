@@ -1,0 +1,39 @@
+{
+ "id": "anthropic--ai--anthropic-json-other-tool-1-chunks",
+ "protocol": "anthropic",
+ "provider": "anthropic",
+ "model": "claude-haiku-4-5-20251001",
+ "core": true,
+ "source": {
+  "repo": "vercel/ai",
+  "commit": "beccad37665bbc56afd85542a932e430bdbc4e2e",
+  "path": "packages/anthropic/src/__fixtures__/anthropic-json-other-tool.1.chunks.txt",
+  "interaction": null,
+  "split_from_multi_response_recording": false,
+  "url": "https://github.com/vercel/ai/blob/beccad37665bbc56afd85542a932e430bdbc4e2e/packages/anthropic/src/__fixtures__/anthropic-json-other-tool.1.chunks.txt"
+ },
+ "features": [
+  "arguments_split_mid_json",
+  "empty_delta",
+  "ping_event",
+  "usage",
+  "usage_restated_in_message_delta"
+ ],
+ "expected": {
+  "tool_calls": [
+   {
+    "id": "toolu_019Zvehfe1XQWweT1pm7okyt",
+    "name": "weather",
+    "arguments": {
+     "location": "San Francisco"
+    }
+   }
+  ],
+  "usage": {
+   "input_tokens": 843,
+   "output_tokens": 28
+  }
+ },
+ "sha256": "70cc39189c43e74f052cccd23409689c7cf003c435c2b097e24df78532e8d432",
+ "body": "event: message_start\ndata: {\"type\":\"message_start\",\"message\":{\"model\":\"claude-haiku-4-5-20251001\",\"id\":\"msg_01CD3XaZfhNabxRt1SG5ybtK\",\"type\":\"message\",\"role\":\"assistant\",\"content\":[],\"stop_reason\":null,\"stop_sequence\":null,\"usage\":{\"input_tokens\":843,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":0},\"output_tokens\":16,\"service_tier\":\"standard\"}}}\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":0,\"content_block\":{\"type\":\"tool_use\",\"id\":\"toolu_019Zvehfe1XQWweT1pm7okyt\",\"name\":\"weather\",\"input\":{}}}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"\"}}\n\nevent: ping\ndata: {\"type\":\"ping\"}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"{\\\"location\\\": \\\"San Francisco\"}}\n\nevent: ping\ndata: {\"type\":\"ping\"}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"\\\"}\"}}\n\nevent: ping\ndata: {\"type\":\"ping\"}\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"index\":0}\n\nevent: ping\ndata: {\"type\":\"ping\"}\n\nevent: ping\ndata: {\"type\":\"ping\"}\n\nevent: message_delta\ndata: {\"type\":\"message_delta\",\"delta\":{\"stop_reason\":\"tool_use\",\"stop_sequence\":null},\"usage\":{\"input_tokens\":843,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":28}}\n\nevent: message_stop\ndata: {\"type\":\"message_stop\"}\n\n"
+}

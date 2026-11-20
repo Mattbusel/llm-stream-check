@@ -1,0 +1,35 @@
+{
+ "id": "gemini--pydantic-ai--test-google-model-iter-stream--1",
+ "protocol": "gemini",
+ "provider": "google",
+ "model": "gemini-2.0-flash",
+ "core": true,
+ "source": {
+  "repo": "pydantic/pydantic-ai",
+  "commit": "ebcaf6586c12885ea19f4e63cbe306e7527d00e1",
+  "path": "tests/models/cassettes/test_google/test_google_model_iter_stream.yaml",
+  "interaction": 1,
+  "split_from_multi_response_recording": false,
+  "url": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_google/test_google_model_iter_stream.yaml"
+ },
+ "features": [
+  "usage"
+ ],
+ "expected": {
+  "tool_calls": [
+   {
+    "id": null,
+    "name": "get_temperature",
+    "arguments": {
+     "city": "Paris"
+    }
+   }
+  ],
+  "usage": {
+   "input_tokens": 64,
+   "output_tokens": 5
+  }
+ },
+ "sha256": "8f6b5d87620bf60fa43ec158ec02c410f3d7fdfb8e1fa5bd7d7d2b0fc6845273",
+ "body": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"functionCall\": {\"name\": \"get_temperature\",\"args\": {\"city\": \"Paris\"}}}],\"role\": \"model\"},\"finishReason\": \"STOP\"}],\"usageMetadata\": {\"promptTokenCount\": 64,\"candidatesTokenCount\": 5,\"totalTokenCount\": 69,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 64}],\"candidatesTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 5}]},\"modelVersion\": \"gemini-2.0-flash\",\"responseId\": \"11peaOXwBPH_2PgPh_z--AY\"}\r\n\r\n"
+}

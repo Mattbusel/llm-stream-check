@@ -1,0 +1,41 @@
+{
+ "id": "anthropic--pydantic-ai--test-anthropic-output-tool-with-thinking--0",
+ "protocol": "anthropic",
+ "provider": "anthropic",
+ "model": "claude-sonnet-4-5-20250929",
+ "core": true,
+ "source": {
+  "repo": "pydantic/pydantic-ai",
+  "commit": "ebcaf6586c12885ea19f4e63cbe306e7527d00e1",
+  "path": "tests/models/cassettes/test_anthropic/test_anthropic_output_tool_with_thinking.yaml",
+  "interaction": 0,
+  "split_from_multi_response_recording": false,
+  "url": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_anthropic/test_anthropic_output_tool_with_thinking.yaml"
+ },
+ "features": [
+  "arguments_split_mid_json",
+  "empty_delta",
+  "ping_event",
+  "thinking_block",
+  "tool_call_index_gap",
+  "usage",
+  "usage_restated_in_message_delta"
+ ],
+ "expected": {
+  "tool_calls": [
+   {
+    "id": "toolu_013vkiHpHLLkwP4d6sH2xeBK",
+    "name": "final_result",
+    "arguments": {
+     "response": 6
+    }
+   }
+  ],
+  "usage": {
+   "input_tokens": 597,
+   "output_tokens": 107
+  }
+ },
+ "sha256": "1c3ebab6a31dcddf39437e5da0336c16f04156bd1ede5002687e547a8e3e3520",
+ "body": "event: message_start\ndata: {\"type\":\"message_start\",\"message\":{\"model\":\"claude-sonnet-4-5-20250929\",\"id\":\"msg_011CfY3u8e41FfwbazrsCYZx\",\"type\":\"message\",\"role\":\"assistant\",\"content\":[],\"container\":null,\"stop_reason\":null,\"stop_sequence\":null,\"stop_details\":null,\"usage\":{\"input_tokens\":597,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":0},\"output_tokens\":8,\"service_tier\":\"standard\",\"inference_geo\":\"not_available\"},\"diagnostics\":null}            }\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":0,\"content_block\":{\"type\":\"thinking\",\"thinking\":\"\",\"signature\":\"\"}        }\n\nevent: ping\ndata: {\"type\": \"ping\"}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\"The user is asking me to calculate \"}           }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\"3 + 3,\"}  }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\" which equals\"}           }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\" 6.\"}}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\" This is a simple\"}              }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\" arithmetic question\"}   }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\".\\n\\nI need\"}            }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\" to provide\"} }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\" the answer\"}  }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\" using the final\"}       }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\"_result function,\"}       }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\" which expects\"} }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\" an integer response.\"}       }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"signature_delta\",\"signature\":\"EsADCpsBCBIYAipAMwc0Zz3BxxiA/Y3skLdz4Qg8Um9PtsGQd8ty5E6eNZsMprALFdCn76v0fhpeGR7ICFCDmrV2LKeZBsSRexMMqTIaY2xhdWRlLXNvbm5ldC00LTUtMjAyNTA5Mjk4AEIIdGhpbmtpbmdaJDQ0YWU2NzZjLTk1OGYtNGQ2OC05MTA4LWVhZTlkZTdiMzY2YqgB+c/v1QYSDP1ZhcOkHmIgsLq35hoMosGyQKCLgm9caI7JIjB+jmDrGOqPVPYztztV91FJyvHMdB2P836jgOu/2LQ9zysAnkAjeRbU2H+xww6CBJEq0QFCZTrfHiPzswYV0H6qIbgjw8+Jgjz1QgttPmjeiX0c5wCNykFn+GU+QAMNFncOZ3+uWhU97YGGKpP1F85lEg1o1GrgP42+YxTDKD+nsnJ9mw1tr06y/I/jRWmzApTMWItwCJBwMtb//eI9zVSjfCzMRxu9Ax7jKnetFfmSRWGc0+hrO0FfFVm/8lP13RPTYY/O+5b7DB+z/25KCjoAkvqAw5/MaRmIoOInG7tR4VB0PQ2XHUpR6kcPVt2ErvPRmD5ZP66JxfUhQNuaX0Fw00ZAAhgB\"}  }\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"index\":0  }\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":1,\"content_block\":{\"type\":\"tool_use\",\"id\":\"toolu_013vkiHpHLLkwP4d6sH2xeBK\",\"name\":\"final_result\",\"input\":{},\"caller\":{\"type\":\"direct\"}}}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"\"}            }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"{\\\"respo\"}               }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"nse\\\": 6}\"}}\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"index\":1              }\n\nevent: message_delta\ndata: {\"type\":\"message_delta\",\"delta\":{\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"stop_details\":null,\"container\":null},\"usage\":{\"input_tokens\":597,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":107,\"output_tokens_details\":{\"thinking_tokens\":51}}     }\n\nevent: message_stop\ndata: {\"type\":\"message_stop\"      }\n\n"
+}

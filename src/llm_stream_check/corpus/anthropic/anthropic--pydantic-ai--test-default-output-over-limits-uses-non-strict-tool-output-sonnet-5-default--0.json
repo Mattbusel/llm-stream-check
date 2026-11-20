@@ -1,0 +1,41 @@
+{
+ "id": "anthropic--pydantic-ai--test-default-output-over-limits-uses-non-strict-tool-output-sonnet-5-default--0",
+ "protocol": "anthropic",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "core": true,
+ "source": {
+  "repo": "pydantic/pydantic-ai",
+  "commit": "ebcaf6586c12885ea19f4e63cbe306e7527d00e1",
+  "path": "tests/models/anthropic/cassettes/test_strict_schema_limits/test_default_output_over_limits_uses_non_strict_tool_output[sonnet-5-default].yaml",
+  "interaction": 0,
+  "split_from_multi_response_recording": false,
+  "url": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/anthropic/cassettes/test_strict_schema_limits/test_default_output_over_limits_uses_non_strict_tool_output[sonnet-5-default].yaml"
+ },
+ "features": [
+  "arguments_split_mid_json",
+  "empty_delta",
+  "ping_event",
+  "thinking_block",
+  "tool_call_index_gap",
+  "usage",
+  "usage_restated_in_message_delta"
+ ],
+ "expected": {
+  "tool_calls": [
+   {
+    "id": "toolu_01RRaYe7EjnUpTq1HrFBF6Fg",
+    "name": "final_result",
+    "arguments": {
+     "answer_0": 1
+    }
+   }
+  ],
+  "usage": {
+   "input_tokens": 1103,
+   "output_tokens": 87
+  }
+ },
+ "sha256": "01222222e711e9a7e2ce0b760d092118198518858b058a72a1123da0c6072b4e",
+ "body": "event: message_start\ndata: {\"type\":\"message_start\",\"message\":{\"model\":\"claude-sonnet-5\",\"id\":\"msg_011CgRbfRDjfEuSK7YyPfS8h\",\"type\":\"message\",\"role\":\"assistant\",\"content\":[],\"container\":null,\"stop_reason\":null,\"stop_sequence\":null,\"stop_details\":null,\"usage\":{\"input_tokens\":1103,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":0},\"output_tokens\":2,\"service_tier\":\"standard\",\"inference_geo\":\"global\",\"speed\":\"standard\"},\"diagnostics\":null}           }\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":0,\"content_block\":{\"type\":\"thinking\",\"thinking\":\"\",\"signature\":\"\"}         }\n\nevent: ping\ndata: {\"type\": \"ping\"}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\"\"}        }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"signature_delta\",\"signature\":\"EooECsQCCBMYAipAlJ8cN3gq6o5tNWgtqwW48kU7Ow2DmAv9ZOlxm37lxdMLMVWzdR2Oyvccuqfwh12OIaQTEXUFFRCHBqnp80Q4sTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQ0NGFlNjc2Yy05NThmLTRkNjgtOTEwOC1lYWU5ZGU3YjM2NmKaAREKD2NsYXVkZS1zb25uZXQtNagBkpr/1gbCAToIBBAAGgwC7jkDTzcFRwwEJq0gATIEEnHPJToEODMjikIE2doCT0oETWIb5lABWgTZBeFWYAJoAXAA2gFgChZwcmVmaXhfYmVmb3JlX2Jsb2NrX3YxEiA08OOD3+GErwOX9qKgyrVPYBwwql8zUzPJhTdqd9uJQCIAMiDCwBPIapyS4i+Wbz2GF3aPi3pEyQKtzAl7+h4JivtOH0gDEgySJ7I2WiLwaJZxEIIaDI/dTtDBCxHaCpGpwCIwv1/CeX24+YXnlRjCYDiCMBsSYQ/X8DoFgFw4Z15dchROVKu85FAKDadTbZYoy62qKnMMmCFLQcMB2KxH0x3oiP9nmm4BA/Y7XmtG7MKRHBh1tIMD4WxmuCZpaJi9hpbTtl0pPBSel7cO+ReBra3s33iW0uhdhKJg6P/ucJJy1+tVfGLSoCQfeW8dkW1SwU/Hd45z4E5TjCaD/7NVg4wcJa2fS0JBGAE=\"} }\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"index\":0   }\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":1,\"content_block\":{\"type\":\"tool_use\",\"id\":\"toolu_01RRaYe7EjnUpTq1HrFBF6Fg\",\"name\":\"final_result\",\"input\":{},\"caller\":{\"type\":\"direct\"}}         }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"\"}        }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"{\\\"answe\"}       }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"r_0\\\": 1}\"}      }\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"index\":1              }\n\nevent: message_delta\ndata: {\"type\":\"message_delta\",\"delta\":{\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"stop_details\":null,\"container\":null},\"usage\":{\"input_tokens\":1103,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":87,\"output_tokens_details\":{\"thinking_tokens\":35}}    }\n\nevent: message_stop\ndata: {\"type\":\"message_stop\"               }\n\n"
+}

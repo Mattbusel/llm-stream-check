@@ -1,0 +1,39 @@
+{
+ "id": "anthropic--pydantic-ai--test-haiku-follows-a-withdrawn-instruction-after-a-tool-result--0",
+ "protocol": "anthropic",
+ "provider": "anthropic",
+ "model": "claude-haiku-5-5",
+ "core": true,
+ "source": {
+  "repo": "pydantic/pydantic-ai",
+  "commit": "ebcaf6586c12885ea19f4e63cbe306e7527d00e1",
+  "path": "tests/models/cassettes/test_anthropic_mid_conversation_system/test_haiku_follows_a_withdrawn_instruction_after_a_tool_result.yaml",
+  "interaction": 0,
+  "split_from_multi_response_recording": false,
+  "url": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_anthropic_mid_conversation_system/test_haiku_follows_a_withdrawn_instruction_after_a_tool_result.yaml"
+ },
+ "features": [
+  "arguments_split_mid_json",
+  "empty_delta",
+  "ping_event",
+  "usage",
+  "usage_restated_in_message_delta"
+ ],
+ "expected": {
+  "tool_calls": [
+   {
+    "id": "toolu_01CrA4tYhNXqtURkFP34hdUV",
+    "name": "lookup",
+    "arguments": {
+     "q": "capital of Australia"
+    }
+   }
+  ],
+  "usage": {
+   "input_tokens": 480,
+   "output_tokens": 52
+  }
+ },
+ "sha256": "adf39a81727f557b2f0435a84f5cdcd2f8a1e0302bc8ef6f2c79f7357ff4c986",
+ "body": "event: message_start\ndata: {\"type\":\"message_start\",\"message\":{\"model\":\"claude-haiku-5-5\",\"id\":\"msg_011CgZNrGG3Zn1E9K65TZsF3\",\"type\":\"message\",\"role\":\"assistant\",\"content\":[],\"container\":null,\"stop_reason\":null,\"stop_sequence\":null,\"stop_details\":null,\"usage\":{\"input_tokens\":480,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":0},\"output_tokens\":16,\"service_tier\":\"standard\",\"inference_geo\":\"global\",\"speed\":\"standard\"},\"diagnostics\":null}            }\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":0,\"content_block\":{\"type\":\"tool_use\",\"id\":\"toolu_01CrA4tYhNXqtURkFP34hdUV\",\"name\":\"lookup\",\"input\":{},\"caller\":{\"type\":\"direct\"}}               }\n\nevent: ping\ndata: {\"type\": \"ping\"}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"\"}  }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"{\\\"q\\\": \\\"\"}              }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"capital\"}             }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\" of Aus\"}  }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"tralia\\\"}\"} }\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"index\":0           }\n\nevent: message_delta\ndata: {\"type\":\"message_delta\",\"delta\":{\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"stop_details\":null,\"container\":null},\"usage\":{\"input_tokens\":480,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":52,\"output_tokens_details\":{\"thinking_tokens\":0}} }\n\nevent: message_stop\ndata: {\"type\":\"message_stop\"             }\n\n"
+}

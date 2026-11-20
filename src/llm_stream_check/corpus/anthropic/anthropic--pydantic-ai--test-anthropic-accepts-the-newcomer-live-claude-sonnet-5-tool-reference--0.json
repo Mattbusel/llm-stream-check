@@ -1,0 +1,39 @@
+{
+ "id": "anthropic--pydantic-ai--test-anthropic-accepts-the-newcomer-live-claude-sonnet-5-tool-reference--0",
+ "protocol": "anthropic",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "core": true,
+ "source": {
+  "repo": "pydantic/pydantic-ai",
+  "commit": "ebcaf6586c12885ea19f4e63cbe306e7527d00e1",
+  "path": "tests/cassettes/test_tool_population_diff/test_anthropic_accepts_the_newcomer_live[claude-sonnet-5-tool_reference].yaml",
+  "interaction": 0,
+  "split_from_multi_response_recording": false,
+  "url": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/cassettes/test_tool_population_diff/test_anthropic_accepts_the_newcomer_live[claude-sonnet-5-tool_reference].yaml"
+ },
+ "features": [
+  "empty_delta",
+  "ping_event",
+  "thinking_block",
+  "tool_call_index_gap",
+  "tool_call_without_arguments",
+  "usage",
+  "usage_restated_in_message_delta"
+ ],
+ "expected": {
+  "tool_calls": [
+   {
+    "id": "toolu_01SyxSLgczpc5RRunreqfrJS",
+    "name": "unlock",
+    "arguments": {}
+   }
+  ],
+  "usage": {
+   "input_tokens": 442,
+   "output_tokens": 92
+  }
+ },
+ "sha256": "d5514bb6f8d0a84e29f121df2beba6c4b60be8b347bc3e725353ea566c4b5810",
+ "body": "event: message_start\ndata: {\"type\":\"message_start\",\"message\":{\"model\":\"claude-sonnet-5\",\"id\":\"msg_011Cfhv9uBhVy3i6m9YznoBi\",\"type\":\"message\",\"role\":\"assistant\",\"content\":[],\"container\":null,\"stop_reason\":null,\"stop_sequence\":null,\"stop_details\":null,\"usage\":{\"input_tokens\":442,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":0},\"output_tokens\":8,\"service_tier\":\"standard\",\"inference_geo\":\"global\"},\"diagnostics\":null}   }\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":0,\"content_block\":{\"type\":\"thinking\",\"thinking\":\"\",\"signature\":\"\"}     }\n\nevent: ping\ndata: {\"type\": \"ping\"}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\"\"}         }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"signature_delta\",\"signature\":\"Et8DCqQBCBIYAipAc38yzKOniPgBgFIVK64hXH8s3O6K5ay64MmjhXZIz0bE+/tIDIxYyRIRAG/qweZwVqk6gf8Vlqs/oMPrWGId7jIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQ0NGFlNjc2Yy05NThmLTRkNjgtOTEwOC1lYWU5ZGU3YjM2NmKaAREKD2NsYXVkZS1zb25uZXQtNagBzo2L1gYSDFoUcAiw85AWCyL4kBoM/YhQkMv7y7fXFGOQIjD+gNVo0mFehPj3Z5dWIcrUQB1fVCc28gxxfP+sLV3JRDTtMvl/k5SrtPh+lQlccfYq5wEEuPxFOay8aFEZtvoPgPnctdN+JnZur5RpfZ4vTpENd4cNVN0AB0F6JPMPuIqF6ZIjBtuWSQqGcLUgIE9u5qjP1kgDo2r/zvBcP0ebHeqpPFWkb78kEncV/4CRN1GjLP/H8KM2g33Yt355FcehSiij/HAQgWNbAUCTxFM02/8tOQyK75YaIB3JQIhN2wqcegbt6TRm3tMin8YzVEbHCfKjC46SkTIxG2ol8FZX4pf+fYX3wQSq9gAB4bX3ckdxxu+SvHi2zrh+ou2NOuXxVUYqZZCxn82t0LFo17kFmMN2jCElULpu0TAYAQ==\"}              }\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"index\":0     }\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":1,\"content_block\":{\"type\":\"tool_use\",\"id\":\"toolu_01SyxSLgczpc5RRunreqfrJS\",\"name\":\"unlock\",\"input\":{},\"caller\":{\"type\":\"direct\"}}           }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"\"}               }\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"index\":1        }\n\nevent: message_delta\ndata: {\"type\":\"message_delta\",\"delta\":{\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"stop_details\":null,\"container\":null},\"usage\":{\"input_tokens\":442,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":92,\"output_tokens_details\":{\"thinking_tokens\":64}}           }\n\nevent: message_stop\ndata: {\"type\":\"message_stop\"              }\n\n"
+}

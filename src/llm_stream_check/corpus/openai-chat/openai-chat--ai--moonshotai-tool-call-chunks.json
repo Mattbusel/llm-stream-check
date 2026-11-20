@@ -1,0 +1,35 @@
+{
+ "id": "openai-chat--ai--moonshotai-tool-call-chunks",
+ "protocol": "openai-chat",
+ "provider": "moonshot",
+ "model": "kimi-k3",
+ "core": true,
+ "source": {
+  "repo": "vercel/ai",
+  "commit": "beccad37665bbc56afd85542a932e430bdbc4e2e",
+  "path": "packages/moonshotai/src/__fixtures__/moonshotai-tool-call.chunks.txt",
+  "interaction": null,
+  "split_from_multi_response_recording": false,
+  "url": "https://github.com/vercel/ai/blob/beccad37665bbc56afd85542a932e430bdbc4e2e/packages/moonshotai/src/__fixtures__/moonshotai-tool-call.chunks.txt"
+ },
+ "features": [
+  "usage"
+ ],
+ "expected": {
+  "tool_calls": [
+   {
+    "id": "call_abc123",
+    "name": "get_weather",
+    "arguments": {
+     "city": "Paris"
+    }
+   }
+  ],
+  "usage": {
+   "input_tokens": 30,
+   "output_tokens": 12
+  }
+ },
+ "sha256": "de836a0ccbf8d7818a623694e1a2230166961c03d25b0d31cca9443cde3a238a",
+ "body": "data: {\"id\":\"chatcmpl-stream-tool\",\"object\":\"chat.completion.chunk\",\"created\":1785880004,\"model\":\"kimi-k3\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"tool_calls\":[{\"index\":0,\"id\":\"call_abc123\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"\"}}]},\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-stream-tool\",\"object\":\"chat.completion.chunk\",\"created\":1785880004,\"model\":\"kimi-k3\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"{\\\"city\\\":\\\"Paris\\\"}\"}}]},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":30,\"completion_tokens\":12,\"total_tokens\":42}}\n\ndata: [DONE]\n\n"
+}

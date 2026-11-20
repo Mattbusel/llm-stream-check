@@ -1,0 +1,2437 @@
+{
+ "tool": "llm-stream-check 0.1.0",
+ "generated": "2026-11-20T18:59:26Z",
+ "adapters": {
+  "openai-python.chat": {
+   "cases": 38,
+   "cases_with_loss": 2,
+   "losses": {
+    "error": 2
+   },
+   "versions": {
+    "openai": "3.57.0"
+   }
+  },
+  "openai-python.responses": {
+   "cases": 26,
+   "cases_with_loss": 4,
+   "losses": {
+    "dropped_tool_call": 4
+   },
+   "versions": {
+    "openai": "3.57.0"
+   }
+  },
+  "anthropic-python": {
+   "cases": 169,
+   "cases_with_loss": 0,
+   "losses": {},
+   "versions": {
+    "anthropic": "2.12.0"
+   }
+  },
+  "google-genai": {
+   "cases": 10,
+   "cases_with_loss": 0,
+   "losses": {},
+   "versions": {
+    "google-genai": "2.34.0"
+   }
+  },
+  "litellm": {
+   "cases": 217,
+   "cases_with_loss": 1,
+   "losses": {
+    "merged_tool_calls": 1
+   },
+   "versions": {
+    "litellm": "1.110.2"
+   }
+  },
+  "litellm.responses": {
+   "cases": 26,
+   "cases_with_loss": 4,
+   "losses": {
+    "dropped_tool_call": 4
+   },
+   "versions": {
+    "litellm": "1.110.2"
+   }
+  },
+  "langchain-openai": {
+   "cases": 38,
+   "cases_with_loss": 1,
+   "losses": {
+    "wrong_usage": 1
+   },
+   "versions": {
+    "langchain-openai": "1.8.4",
+    "langchain-core": "1.8.4"
+   }
+  },
+  "langchain-openai.responses": {
+   "cases": 26,
+   "cases_with_loss": 0,
+   "losses": {},
+   "versions": {
+    "langchain-openai": "1.8.4",
+    "langchain-core": "1.8.4"
+   }
+  },
+  "langchain-anthropic": {
+   "cases": 169,
+   "cases_with_loss": 2,
+   "losses": {
+    "wrong_usage": 1,
+    "error": 1
+   },
+   "versions": {
+    "langchain-anthropic": "1.7.12",
+    "langchain-core": "1.8.4"
+   }
+  },
+  "langchain-google-genai": {
+   "cases": 10,
+   "cases_with_loss": 0,
+   "losses": {},
+   "versions": {
+    "langchain-google-genai": "4.4.3",
+    "langchain-core": "1.8.4"
+   }
+  },
+  "llama-index-openai": {
+   "cases": 38,
+   "cases_with_loss": 3,
+   "losses": {
+    "merged_tool_calls": 1,
+    "dropped_tool_call": 1,
+    "error": 1
+   },
+   "versions": {
+    "llama-index-llms-openai": "0.9.0",
+    "llama-index-core": "0.14.26"
+   }
+  },
+  "llama-index-google-genai": {
+   "cases": 10,
+   "cases_with_loss": 0,
+   "losses": {},
+   "versions": {
+    "llama-index-llms-google-genai": "0.12.0",
+    "llama-index-core": "0.14.26"
+   }
+  },
+  "pydantic-ai.openai-chat": {
+   "cases": 38,
+   "cases_with_loss": 1,
+   "losses": {
+    "wrong_usage": 1
+   },
+   "versions": {
+    "pydantic-ai-slim": "2.71.0"
+   }
+  },
+  "pydantic-ai.openai-responses": {
+   "cases": 26,
+   "cases_with_loss": 0,
+   "losses": {},
+   "versions": {
+    "pydantic-ai-slim": "2.71.0"
+   }
+  },
+  "pydantic-ai.anthropic": {
+   "cases": 169,
+   "cases_with_loss": 0,
+   "losses": {},
+   "versions": {
+    "pydantic-ai-slim": "2.71.0"
+   }
+  },
+  "pydantic-ai.google": {
+   "cases": 10,
+   "cases_with_loss": 0,
+   "losses": {},
+   "versions": {
+    "pydantic-ai-slim": "2.71.0"
+   }
+  },
+  "openai-agents.chat": {
+   "cases": 38,
+   "cases_with_loss": 2,
+   "losses": {
+    "merged_tool_calls": 1,
+    "error": 1
+   },
+   "versions": {
+    "openai-agents": "0.25.0"
+   }
+  },
+  "openai-agents.responses": {
+   "cases": 26,
+   "cases_with_loss": 4,
+   "losses": {
+    "dropped_tool_call": 4
+   },
+   "versions": {
+    "openai-agents": "0.25.0"
+   }
+  },
+  "haystack.openai": {
+   "cases": 38,
+   "cases_with_loss": 4,
+   "losses": {
+    "wrong_tool_call_id": 1,
+    "error": 3
+   },
+   "versions": {
+    "haystack-ai": "3.5.0"
+   }
+  },
+  "haystack.anthropic": {
+   "cases": 169,
+   "cases_with_loss": 0,
+   "losses": {},
+   "versions": {
+    "anthropic-haystack": "8.1.0",
+    "haystack-ai": "3.5.0"
+   }
+  },
+  "haystack.google-genai": {
+   "cases": 10,
+   "cases_with_loss": 0,
+   "losses": {},
+   "versions": {
+    "google-genai-haystack": "7.2.2",
+    "haystack-ai": "3.5.0"
+   }
+  },
+  "autogen.openai": {
+   "cases": 38,
+   "cases_with_loss": 2,
+   "losses": {
+    "merged_tool_calls": 1,
+    "error": 1
+   },
+   "versions": {
+    "autogen-ext": "0.7.5",
+    "autogen-core": "0.7.5"
+   }
+  },
+  "smolagents.openai": {
+   "cases": 38,
+   "cases_with_loss": 3,
+   "losses": {
+    "error": 3
+   },
+   "versions": {
+    "smolagents": "1.26.0"
+   }
+  },
+  "smolagents.litellm": {
+   "cases": 217,
+   "cases_with_loss": 1,
+   "losses": {
+    "merged_tool_calls": 1
+   },
+   "versions": {
+    "smolagents": "1.26.0",
+    "litellm": "1.110.2"
+   }
+  },
+  "crewai": {
+   "cases": 217,
+   "cases_with_loss": 2,
+   "losses": {
+    "merged_tool_calls": 1,
+    "error": 1
+   },
+   "versions": {
+    "crewai": "1.15.44"
+   }
+  },
+  "semantic-kernel.openai": {
+   "cases": 38,
+   "cases_with_loss": 1,
+   "losses": {
+    "error": 1
+   },
+   "versions": {
+    "semantic-kernel": "1.47.0"
+   }
+  },
+  "agent-framework.openai": {
+   "cases": 38,
+   "cases_with_loss": 0,
+   "losses": {},
+   "versions": {
+    "agent-framework-openai": "1.18.2",
+    "agent-framework-core": "1.26.0"
+   }
+  },
+  "agent-framework.anthropic": {
+   "cases": 169,
+   "cases_with_loss": 0,
+   "losses": {},
+   "versions": {
+    "agent-framework-anthropic": "1.0.0b261112",
+    "agent-framework-core": "1.26.0"
+   }
+  },
+  "google-adk.litellm": {
+   "cases": 217,
+   "cases_with_loss": 0,
+   "losses": {},
+   "versions": {
+    "google-adk": "2.15.0",
+    "litellm": "1.110.2"
+   }
+  },
+  "google-adk.gemini": {
+   "cases": 10,
+   "cases_with_loss": 0,
+   "losses": {},
+   "versions": {
+    "google-adk": "2.15.0"
+   }
+  },
+  "agno.openai": {
+   "cases": 38,
+   "cases_with_loss": 3,
+   "losses": {
+    "dropped_tool_call": 3
+   },
+   "versions": {
+    "agno": "3.2.1"
+   }
+  },
+  "agno.anthropic": {
+   "cases": 169,
+   "cases_with_loss": 0,
+   "losses": {},
+   "versions": {
+    "agno": "3.2.1"
+   }
+  },
+  "llm.openai": {
+   "cases": 38,
+   "cases_with_loss": 1,
+   "losses": {
+    "error": 1
+   },
+   "versions": {
+    "llm": "0.38"
+   }
+  },
+  "llm.anthropic": {
+   "cases": 169,
+   "cases_with_loss": 0,
+   "losses": {},
+   "versions": {
+    "llm": "0.38",
+    "llm-anthropic": "0.31"
+   }
+  },
+  "strands.openai": {
+   "cases": 38,
+   "cases_with_loss": 2,
+   "losses": {
+    "merged_tool_calls": 1,
+    "error": 1
+   },
+   "versions": {
+    "strands-agents": "1.65.0"
+   }
+  },
+  "strands.anthropic": {
+   "cases": 169,
+   "cases_with_loss": 0,
+   "losses": {},
+   "versions": {
+    "strands-agents": "1.65.0"
+   }
+  },
+  "strands.gemini": {
+   "cases": 10,
+   "cases_with_loss": 0,
+   "losses": {},
+   "versions": {
+    "strands-agents": "1.65.0"
+   }
+  },
+  "strands.litellm": {
+   "cases": 38,
+   "cases_with_loss": 1,
+   "losses": {
+    "merged_tool_calls": 1
+   },
+   "versions": {
+    "strands-agents": "1.65.0",
+    "litellm": "1.106.12"
+   }
+  },
+  "llama-index-anthropic": {
+   "cases": 169,
+   "cases_with_loss": 0,
+   "losses": {},
+   "versions": {
+    "llama-index-llms-anthropic": "0.13.0",
+    "llama-index-core": "0.14.26"
+   }
+  },
+  "autogen.anthropic": {
+   "cases": 169,
+   "cases_with_loss": 9,
+   "losses": {
+    "wrong_usage": 9
+   },
+   "versions": {
+    "autogen-ext": "0.7.5",
+    "autogen-core": "0.7.5"
+   }
+  },
+  "vercel-ai.openai-chat": {
+   "cases": 38,
+   "cases_with_loss": 3,
+   "losses": {
+    "error": 3
+   },
+   "versions": {
+    "ai": "7.0.178",
+    "@ai-sdk/openai": "4.0.122"
+   }
+  },
+  "vercel-ai.openai-responses": {
+   "cases": 26,
+   "cases_with_loss": 0,
+   "losses": {},
+   "versions": {
+    "ai": "7.0.178",
+    "@ai-sdk/openai": "4.0.122"
+   }
+  },
+  "vercel-ai.anthropic": {
+   "cases": 169,
+   "cases_with_loss": 0,
+   "losses": {},
+   "versions": {
+    "ai": "7.0.178",
+    "@ai-sdk/anthropic": "4.0.107"
+   }
+  },
+  "vercel-ai.google": {
+   "cases": 10,
+   "cases_with_loss": 0,
+   "losses": {},
+   "versions": {
+    "ai": "7.0.178",
+    "@ai-sdk/google": "4.0.123"
+   }
+  },
+  "openai-node.chat": {
+   "cases": 38,
+   "cases_with_loss": 3,
+   "losses": {
+    "error": 3
+   },
+   "versions": {
+    "openai": "7.62.0"
+   }
+  },
+  "openai-node.responses": {
+   "cases": 26,
+   "cases_with_loss": 4,
+   "losses": {
+    "dropped_tool_call": 4
+   },
+   "versions": {
+    "openai": "7.62.0"
+   }
+  },
+  "anthropic-node": {
+   "cases": 169,
+   "cases_with_loss": 0,
+   "losses": {},
+   "versions": {
+    "@anthropic-ai/sdk": "1.12.0"
+   }
+  },
+  "langchainjs.openai": {
+   "cases": 38,
+   "cases_with_loss": 1,
+   "losses": {
+    "dropped_tool_call": 1,
+    "lost_usage": 1
+   },
+   "versions": {
+    "@langchain/openai": "1.8.4",
+    "@langchain/core": "1.4.2"
+   }
+  }
+ },
+ "rows": [
+  {
+   "adapter": "openai-python.chat",
+   "case": "openai-chat--ai--mistral-tool-call-chunks",
+   "protocol": "openai-chat",
+   "provider": "mistral",
+   "features": [
+    "empty_delta",
+    "indexless_tool_call",
+    "name_and_arguments_in_one_chunk",
+    "usage"
+   ],
+   "source": "https://github.com/vercel/ai/blob/beccad37665bbc56afd85542a932e430bdbc4e2e/packages/mistral/src/__fixtures__/mistral-tool-call.chunks.txt",
+   "losses": [
+    {
+     "kind": "error",
+     "detail": "TypeError: list indices must be integers or slices, not NoneType @ C:\\Users\\Matthew\\_lsc_fw\\a\\Lib\\site-packages\\openai\\lib\\streaming\\chat\\_completions.py:447"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": null,
+    "usage_supported": true,
+    "error": "TypeError: list indices must be integers or slices, not NoneType @ C:\\Users\\Matthew\\_lsc_fw\\a\\Lib\\site-packages\\openai\\lib\\streaming\\chat\\_completions.py:447"
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "openai-python.chat",
+   "case": "openai-chat--pydantic-ai--test-compatible-api-gemini-3-tool-call-thought-signature-true--0",
+   "protocol": "openai-chat",
+   "provider": "openai",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "indexless_tool_call",
+    "name_and_arguments_in_one_chunk",
+    "parallel_tool_calls",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_openai/test_compatible_api_gemini_3_tool_call_thought_signature[True].yaml",
+   "losses": [
+    {
+     "kind": "error",
+     "detail": "TypeError: list indices must be integers or slices, not NoneType @ C:\\Users\\Matthew\\_lsc_fw\\a\\Lib\\site-packages\\openai\\lib\\streaming\\chat\\_completions.py:537"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": null,
+    "usage_supported": true,
+    "error": "TypeError: list indices must be integers or slices, not NoneType @ C:\\Users\\Matthew\\_lsc_fw\\a\\Lib\\site-packages\\openai\\lib\\streaming\\chat\\_completions.py:537"
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "openai-python.responses",
+   "case": "openai-responses--pydantic-ai--test-codex-calls-additional-tool--0",
+   "protocol": "openai-responses",
+   "provider": "codex",
+   "features": [
+    "arguments_split_mid_json",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_openai_codex/test_codex_calls_additional_tool.yaml",
+   "losses": [
+    {
+     "kind": "dropped_tool_call",
+     "detail": "1 calls in the stream, 0 surfaced; missing ['lookup_refund_policy']"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": {
+     "input_tokens": 155,
+     "output_tokens": 23
+    },
+    "usage_supported": true,
+    "error": null
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "openai-python.responses",
+   "case": "openai-responses--pydantic-ai--test-codex-deferred-tool-search--0",
+   "protocol": "openai-responses",
+   "provider": "codex",
+   "features": [
+    "tool_call_index_gap",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_openai_codex/test_codex_deferred_tool_search.yaml",
+   "losses": [
+    {
+     "kind": "dropped_tool_call",
+     "detail": "1 calls in the stream, 0 surfaced; missing ['moo']"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": {
+     "input_tokens": 565,
+     "output_tokens": 33
+    },
+    "usage_supported": true,
+    "error": null
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "openai-python.responses",
+   "case": "openai-responses--pydantic-ai--test-codex-tool-roundtrip-false--0",
+   "protocol": "openai-responses",
+   "provider": "codex",
+   "features": [
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_openai_codex/test_codex_tool_roundtrip[False].yaml",
+   "losses": [
+    {
+     "kind": "dropped_tool_call",
+     "detail": "1 calls in the stream, 0 surfaced; missing ['moo']"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": {
+     "input_tokens": 62,
+     "output_tokens": 14
+    },
+    "usage_supported": true,
+    "error": null
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "openai-python.responses",
+   "case": "openai-responses--pydantic-ai--test-codex-tool-roundtrip-true--0",
+   "protocol": "openai-responses",
+   "provider": "codex",
+   "features": [
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_openai_codex/test_codex_tool_roundtrip[True].yaml",
+   "losses": [
+    {
+     "kind": "dropped_tool_call",
+     "detail": "1 calls in the stream, 0 surfaced; missing ['moo']"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": {
+     "input_tokens": 62,
+     "output_tokens": 14
+    },
+    "usage_supported": true,
+    "error": null
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "litellm",
+   "case": "openai-chat--pydantic-ai--test-compatible-api-gemini-3-tool-call-thought-signature-true--0",
+   "protocol": "openai-chat",
+   "provider": "openai",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "indexless_tool_call",
+    "name_and_arguments_in_one_chunk",
+    "parallel_tool_calls",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_openai/test_compatible_api_gemini_3_tool_call_thought_signature[True].yaml",
+   "losses": [
+    {
+     "kind": "merged_tool_calls",
+     "detail": "2 calls in the stream came out as 1: get_weather({\"__unparseable__\": \"{\\\"city\\\":\\\"Taipei\\\"}{\\\"city\\\":\\\"Kaohsiung\\\"}\"})"
+    }
+   ],
+   "observed": {
+    "tool_calls": [
+     {
+      "name": "get_weather",
+      "arguments": "{\"city\":\"Taipei\"}{\"city\":\"Kaohsiung\"}",
+      "id": "call_108772"
+     }
+    ],
+    "usage": {
+     "input_tokens": 74,
+     "output_tokens": 36
+    },
+    "usage_supported": true,
+    "error": null
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "litellm.responses",
+   "case": "openai-responses--pydantic-ai--test-codex-calls-additional-tool--0",
+   "protocol": "openai-responses",
+   "provider": "codex",
+   "features": [
+    "arguments_split_mid_json",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_openai_codex/test_codex_calls_additional_tool.yaml",
+   "losses": [
+    {
+     "kind": "dropped_tool_call",
+     "detail": "1 calls in the stream, 0 surfaced; missing ['lookup_refund_policy']"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": {
+     "input_tokens": 155,
+     "output_tokens": 23
+    },
+    "usage_supported": true,
+    "error": null
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "litellm.responses",
+   "case": "openai-responses--pydantic-ai--test-codex-deferred-tool-search--0",
+   "protocol": "openai-responses",
+   "provider": "codex",
+   "features": [
+    "tool_call_index_gap",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_openai_codex/test_codex_deferred_tool_search.yaml",
+   "losses": [
+    {
+     "kind": "dropped_tool_call",
+     "detail": "1 calls in the stream, 0 surfaced; missing ['moo']"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": {
+     "input_tokens": 565,
+     "output_tokens": 33
+    },
+    "usage_supported": true,
+    "error": null
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "litellm.responses",
+   "case": "openai-responses--pydantic-ai--test-codex-tool-roundtrip-false--0",
+   "protocol": "openai-responses",
+   "provider": "codex",
+   "features": [
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_openai_codex/test_codex_tool_roundtrip[False].yaml",
+   "losses": [
+    {
+     "kind": "dropped_tool_call",
+     "detail": "1 calls in the stream, 0 surfaced; missing ['moo']"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": {
+     "input_tokens": 62,
+     "output_tokens": 14
+    },
+    "usage_supported": true,
+    "error": null
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "litellm.responses",
+   "case": "openai-responses--pydantic-ai--test-codex-tool-roundtrip-true--0",
+   "protocol": "openai-responses",
+   "provider": "codex",
+   "features": [
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_openai_codex/test_codex_tool_roundtrip[True].yaml",
+   "losses": [
+    {
+     "kind": "dropped_tool_call",
+     "detail": "1 calls in the stream, 0 surfaced; missing ['moo']"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": {
+     "input_tokens": 62,
+     "output_tokens": 14
+    },
+    "usage_supported": true,
+    "error": null
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "langchain-openai",
+   "case": "openai-chat--pydantic-ai--test-compatible-api-gemini-3-tool-call-thought-signature-true--0",
+   "protocol": "openai-chat",
+   "provider": "openai",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "indexless_tool_call",
+    "name_and_arguments_in_one_chunk",
+    "parallel_tool_calls",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_openai/test_compatible_api_gemini_3_tool_call_thought_signature[True].yaml",
+   "losses": [
+    {
+     "kind": "wrong_usage",
+     "detail": "input 222 != 74; output 89 != 36"
+    }
+   ],
+   "observed": {
+    "tool_calls": [
+     {
+      "name": "get_weather",
+      "arguments": {
+       "city": "Taipei"
+      },
+      "id": "call_108766"
+     },
+     {
+      "name": "get_weather",
+      "arguments": {
+       "city": "Kaohsiung"
+      },
+      "id": "call_108772"
+     }
+    ],
+    "usage": {
+     "input_tokens": 222,
+     "output_tokens": 89
+    },
+    "usage_supported": true,
+    "error": null
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "langchain-anthropic",
+   "case": "anthropic--anthropic-sdk-python--tool-use-response",
+   "protocol": "anthropic",
+   "provider": "anthropic",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "ping_event",
+    "tool_call_index_gap",
+    "usage"
+   ],
+   "source": "https://github.com/anthropics/anthropic-sdk-python/blob/8baaef1c4d23b2e4861d05da0dca65252e879eb8/tests/lib/streaming/fixtures/tool_use_response.txt",
+   "losses": [
+    {
+     "kind": "wrong_usage",
+     "detail": "input 0 != 377"
+    }
+   ],
+   "observed": {
+    "tool_calls": [
+     {
+      "name": "get_weather",
+      "arguments": {
+       "location": "Paris"
+      },
+      "id": "toolu_01NRLabsLyVHZPKxbKvkfSMn"
+     }
+    ],
+    "usage": {
+     "input_tokens": 0,
+     "output_tokens": 65
+    },
+    "usage_supported": true,
+    "error": null
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "langchain-anthropic",
+   "case": "anthropic--pydantic-ai--test-anthropic-memory-tool--0",
+   "protocol": "anthropic",
+   "provider": "anthropic",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "ping_event",
+    "usage",
+    "usage_restated_in_message_delta"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_anthropic/test_anthropic_memory_tool.yaml",
+   "losses": [
+    {
+     "kind": "error",
+     "detail": "AttributeError: 'dict' object has no attribute 'model_dump' @ C:\\Users\\Matthew\\_lsc_fw\\a\\Lib\\site-packages\\langchain_anthropic\\chat_models.py:2574"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": null,
+    "usage_supported": true,
+    "error": "AttributeError: 'dict' object has no attribute 'model_dump' @ C:\\Users\\Matthew\\_lsc_fw\\a\\Lib\\site-packages\\langchain_anthropic\\chat_models.py:2574"
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "llama-index-openai",
+   "case": "openai-chat--pydantic-ai--test-compatible-api-gemini-3-tool-call-thought-signature-true--0",
+   "protocol": "openai-chat",
+   "provider": "openai",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "indexless_tool_call",
+    "name_and_arguments_in_one_chunk",
+    "parallel_tool_calls",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_openai/test_compatible_api_gemini_3_tool_call_thought_signature[True].yaml",
+   "losses": [
+    {
+     "kind": "merged_tool_calls",
+     "detail": "2 calls in the stream came out as 1: get_weatherget_weather({})"
+    }
+   ],
+   "observed": {
+    "tool_calls": [
+     {
+      "name": "get_weatherget_weather",
+      "arguments": {},
+      "id": "call_108766call_108772"
+     }
+    ],
+    "usage": {
+     "input_tokens": 74,
+     "output_tokens": 36
+    },
+    "usage_supported": true,
+    "error": null
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "llama-index-openai",
+   "case": "openai-chat--pydantic-ai--test-mistral-stream-parallel-tool-calls-mistral-small-latest--0",
+   "protocol": "openai-chat",
+   "provider": "mistral",
+   "features": [
+    "empty_delta",
+    "multiple_tool_calls_in_one_chunk",
+    "name_and_arguments_in_one_chunk",
+    "parallel_tool_calls",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_mistral/test_mistral_stream_parallel_tool_calls[mistral-small-latest].yaml",
+   "losses": [
+    {
+     "kind": "dropped_tool_call",
+     "detail": "3 calls in the stream, 1 surfaced; missing ['get_weather', 'get_time']"
+    }
+   ],
+   "observed": {
+    "tool_calls": [
+     {
+      "name": "get_weather",
+      "arguments": {
+       "city": "Paris"
+      },
+      "id": "Fi65w8Plu"
+     }
+    ],
+    "usage": {
+     "input_tokens": 155,
+     "output_tokens": 33
+    },
+    "usage_supported": true,
+    "error": null
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "llama-index-openai",
+   "case": "openai-chat--pydantic-ai--test-mistral-stream-parallel-tool-calls-zai-glm-5-3--0",
+   "protocol": "openai-chat",
+   "provider": "mistral",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "multiple_tool_calls_in_one_chunk",
+    "name_and_arguments_in_one_chunk",
+    "parallel_tool_calls",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_mistral/test_mistral_stream_parallel_tool_calls[zai-glm-5-3].yaml",
+   "losses": [
+    {
+     "kind": "error",
+     "detail": "TypeError: can only concatenate str (not \"list\") to str @ C:\\Users\\Matthew\\_lsc_fw\\a\\Lib\\site-packages\\llama_index\\llms\\openai\\base.py:570"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": null,
+    "usage_supported": true,
+    "error": "TypeError: can only concatenate str (not \"list\") to str @ C:\\Users\\Matthew\\_lsc_fw\\a\\Lib\\site-packages\\llama_index\\llms\\openai\\base.py:570"
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "pydantic-ai.openai-chat",
+   "case": "openai-chat--pydantic-ai--test-compatible-api-gemini-3-tool-call-thought-signature-true--0",
+   "protocol": "openai-chat",
+   "provider": "openai",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "indexless_tool_call",
+    "name_and_arguments_in_one_chunk",
+    "parallel_tool_calls",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_openai/test_compatible_api_gemini_3_tool_call_thought_signature[True].yaml",
+   "losses": [
+    {
+     "kind": "wrong_usage",
+     "detail": "input 222 != 74; output 89 != 36"
+    }
+   ],
+   "observed": {
+    "tool_calls": [
+     {
+      "name": "get_weather",
+      "arguments": "{\"city\":\"Taipei\"}",
+      "id": "call_108766"
+     },
+     {
+      "name": "get_weather",
+      "arguments": "{\"city\":\"Kaohsiung\"}",
+      "id": "call_108772"
+     }
+    ],
+    "usage": {
+     "input_tokens": 222,
+     "output_tokens": 89
+    },
+    "usage_supported": true,
+    "error": null
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "openai-agents.chat",
+   "case": "openai-chat--pydantic-ai--test-compatible-api-gemini-3-tool-call-thought-signature-true--0",
+   "protocol": "openai-chat",
+   "provider": "openai",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "indexless_tool_call",
+    "name_and_arguments_in_one_chunk",
+    "parallel_tool_calls",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_openai/test_compatible_api_gemini_3_tool_call_thought_signature[True].yaml",
+   "losses": [
+    {
+     "kind": "merged_tool_calls",
+     "detail": "2 calls in the stream came out as 1: get_weather({\"__unparseable__\": \"{\\\"city\\\":\\\"Taipei\\\"}{\\\"city\\\":\\\"Kaohsiung\\\"}\"})"
+    }
+   ],
+   "observed": {
+    "tool_calls": [
+     {
+      "name": "get_weather",
+      "arguments": "{\"city\":\"Taipei\"}{\"city\":\"Kaohsiung\"}",
+      "id": "call_108772"
+     }
+    ],
+    "usage": {
+     "input_tokens": 74,
+     "output_tokens": 36
+    },
+    "usage_supported": true,
+    "error": null
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "openai-agents.chat",
+   "case": "openai-chat--pydantic-ai--test-mistral-stream-parallel-tool-calls-zai-glm-5-3--0",
+   "protocol": "openai-chat",
+   "provider": "mistral",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "multiple_tool_calls_in_one_chunk",
+    "name_and_arguments_in_one_chunk",
+    "parallel_tool_calls",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_mistral/test_mistral_stream_parallel_tool_calls[zai-glm-5-3].yaml",
+   "losses": [
+    {
+     "kind": "error",
+     "detail": "ValidationError: 1 validation error for ResponseTextDeltaEvent\ndelta\n  Input should be a valid string [type=string_type, input_value=[{'type': 'thinking', 'th...The'}], 'closed': True}], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.14/v/string_type @ C:\\Users\\Matthew\\_lsc_fw\\a\\Lib\\site-packages\\pydantic\\main.py:280"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": null,
+    "usage_supported": true,
+    "error": "ValidationError: 1 validation error for ResponseTextDeltaEvent\ndelta\n  Input should be a valid string [type=string_type, input_value=[{'type': 'thinking', 'th...The'}], 'closed': True}], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.14/v/string_type @ C:\\Users\\Matthew\\_lsc_fw\\a\\Lib\\site-packages\\pydantic\\main.py:280"
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "openai-agents.responses",
+   "case": "openai-responses--pydantic-ai--test-codex-calls-additional-tool--0",
+   "protocol": "openai-responses",
+   "provider": "codex",
+   "features": [
+    "arguments_split_mid_json",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_openai_codex/test_codex_calls_additional_tool.yaml",
+   "losses": [
+    {
+     "kind": "dropped_tool_call",
+     "detail": "1 calls in the stream, 0 surfaced; missing ['lookup_refund_policy']"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": {
+     "input_tokens": 155,
+     "output_tokens": 23
+    },
+    "usage_supported": true,
+    "error": null
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "openai-agents.responses",
+   "case": "openai-responses--pydantic-ai--test-codex-deferred-tool-search--0",
+   "protocol": "openai-responses",
+   "provider": "codex",
+   "features": [
+    "tool_call_index_gap",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_openai_codex/test_codex_deferred_tool_search.yaml",
+   "losses": [
+    {
+     "kind": "dropped_tool_call",
+     "detail": "1 calls in the stream, 0 surfaced; missing ['moo']"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": {
+     "input_tokens": 565,
+     "output_tokens": 33
+    },
+    "usage_supported": true,
+    "error": null
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "openai-agents.responses",
+   "case": "openai-responses--pydantic-ai--test-codex-tool-roundtrip-false--0",
+   "protocol": "openai-responses",
+   "provider": "codex",
+   "features": [
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_openai_codex/test_codex_tool_roundtrip[False].yaml",
+   "losses": [
+    {
+     "kind": "dropped_tool_call",
+     "detail": "1 calls in the stream, 0 surfaced; missing ['moo']"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": {
+     "input_tokens": 62,
+     "output_tokens": 14
+    },
+    "usage_supported": true,
+    "error": null
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "openai-agents.responses",
+   "case": "openai-responses--pydantic-ai--test-codex-tool-roundtrip-true--0",
+   "protocol": "openai-responses",
+   "provider": "codex",
+   "features": [
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_openai_codex/test_codex_tool_roundtrip[True].yaml",
+   "losses": [
+    {
+     "kind": "dropped_tool_call",
+     "detail": "1 calls in the stream, 0 surfaced; missing ['moo']"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": {
+     "input_tokens": 62,
+     "output_tokens": 14
+    },
+    "usage_supported": true,
+    "error": null
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "haystack.openai",
+   "case": "openai-chat--ai--alibaba-tool-call-chunks",
+   "protocol": "openai-chat",
+   "provider": "alibaba",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "usage",
+    "usage_only_final_chunk"
+   ],
+   "source": "https://github.com/vercel/ai/blob/beccad37665bbc56afd85542a932e430bdbc4e2e/packages/alibaba/src/__fixtures__/alibaba-tool-call.chunks.txt",
+   "losses": [
+    {
+     "kind": "wrong_tool_call_id",
+     "detail": "weather: provider id 'call_eee11723464a4b9eb8cee71d', got ''"
+    }
+   ],
+   "observed": {
+    "tool_calls": [
+     {
+      "name": "weather",
+      "arguments": {
+       "location": "San Francisco"
+      },
+      "id": ""
+     }
+    ],
+    "usage": {
+     "input_tokens": 295,
+     "output_tokens": 22
+    },
+    "usage_supported": true,
+    "error": null
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "haystack.openai",
+   "case": "openai-chat--ai--mistral-tool-call-chunks",
+   "protocol": "openai-chat",
+   "provider": "mistral",
+   "features": [
+    "empty_delta",
+    "indexless_tool_call",
+    "name_and_arguments_in_one_chunk",
+    "usage"
+   ],
+   "source": "https://github.com/vercel/ai/blob/beccad37665bbc56afd85542a932e430bdbc4e2e/packages/mistral/src/__fixtures__/mistral-tool-call.chunks.txt",
+   "losses": [
+    {
+     "kind": "error",
+     "detail": "ValueError: If `tool_call`, `tool_call_result` or `reasoning` is set, `index` must also be set. @ C:\\Users\\Matthew\\_lsc_fw\\a\\Lib\\site-packages\\haystack\\dataclasses\\streaming_chunk.py:153"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": null,
+    "usage_supported": true,
+    "error": "ValueError: If `tool_call`, `tool_call_result` or `reasoning` is set, `index` must also be set. @ C:\\Users\\Matthew\\_lsc_fw\\a\\Lib\\site-packages\\haystack\\dataclasses\\streaming_chunk.py:153"
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "haystack.openai",
+   "case": "openai-chat--pydantic-ai--test-compatible-api-gemini-3-tool-call-thought-signature-true--0",
+   "protocol": "openai-chat",
+   "provider": "openai",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "indexless_tool_call",
+    "name_and_arguments_in_one_chunk",
+    "parallel_tool_calls",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_openai/test_compatible_api_gemini_3_tool_call_thought_signature[True].yaml",
+   "losses": [
+    {
+     "kind": "error",
+     "detail": "ValueError: If `tool_call`, `tool_call_result` or `reasoning` is set, `index` must also be set. @ C:\\Users\\Matthew\\_lsc_fw\\a\\Lib\\site-packages\\haystack\\dataclasses\\streaming_chunk.py:153"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": null,
+    "usage_supported": true,
+    "error": "ValueError: If `tool_call`, `tool_call_result` or `reasoning` is set, `index` must also be set. @ C:\\Users\\Matthew\\_lsc_fw\\a\\Lib\\site-packages\\haystack\\dataclasses\\streaming_chunk.py:153"
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "haystack.openai",
+   "case": "openai-chat--pydantic-ai--test-mistral-stream-parallel-tool-calls-zai-glm-5-3--0",
+   "protocol": "openai-chat",
+   "provider": "mistral",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "multiple_tool_calls_in_one_chunk",
+    "name_and_arguments_in_one_chunk",
+    "parallel_tool_calls",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_mistral/test_mistral_stream_parallel_tool_calls[zai-glm-5-3].yaml",
+   "losses": [
+    {
+     "kind": "error",
+     "detail": "TypeError: sequence item 2: expected str instance, list found @ C:\\Users\\Matthew\\_lsc_fw\\a\\Lib\\site-packages\\haystack\\components\\generators\\utils.py:125"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": null,
+    "usage_supported": true,
+    "error": "TypeError: sequence item 2: expected str instance, list found @ C:\\Users\\Matthew\\_lsc_fw\\a\\Lib\\site-packages\\haystack\\components\\generators\\utils.py:125"
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "autogen.openai",
+   "case": "openai-chat--pydantic-ai--test-compatible-api-gemini-3-tool-call-thought-signature-true--0",
+   "protocol": "openai-chat",
+   "provider": "openai",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "indexless_tool_call",
+    "name_and_arguments_in_one_chunk",
+    "parallel_tool_calls",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_openai/test_compatible_api_gemini_3_tool_call_thought_signature[True].yaml",
+   "losses": [
+    {
+     "kind": "merged_tool_calls",
+     "detail": "2 calls in the stream came out as 1: get_weatherget_weather({\"__unparseable__\": \"{\\\"city\\\":\\\"Taipei\\\"}{\\\"city\\\":\\\"Kaohsiung\\\"}\"})"
+    }
+   ],
+   "observed": {
+    "tool_calls": [
+     {
+      "name": "get_weatherget_weather",
+      "arguments": "{\"city\":\"Taipei\"}{\"city\":\"Kaohsiung\"}",
+      "id": "call_108766call_108772"
+     }
+    ],
+    "usage": {
+     "input_tokens": 74,
+     "output_tokens": 36
+    },
+    "usage_supported": true,
+    "error": null
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "autogen.openai",
+   "case": "openai-chat--pydantic-ai--test-mistral-stream-parallel-tool-calls-zai-glm-5-3--0",
+   "protocol": "openai-chat",
+   "provider": "mistral",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "multiple_tool_calls_in_one_chunk",
+    "name_and_arguments_in_one_chunk",
+    "parallel_tool_calls",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_mistral/test_mistral_stream_parallel_tool_calls[zai-glm-5-3].yaml",
+   "losses": [
+    {
+     "kind": "error",
+     "detail": "TypeError: sequence item 0: expected str instance, list found @ C:\\Users\\Matthew\\_lsc_fw\\a\\Lib\\site-packages\\autogen_ext\\models\\openai\\_openai_client.py:1036"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": null,
+    "usage_supported": true,
+    "error": "TypeError: sequence item 0: expected str instance, list found @ C:\\Users\\Matthew\\_lsc_fw\\a\\Lib\\site-packages\\autogen_ext\\models\\openai\\_openai_client.py:1036"
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "smolagents.openai",
+   "case": "openai-chat--ai--mistral-tool-call-chunks",
+   "protocol": "openai-chat",
+   "provider": "mistral",
+   "features": [
+    "empty_delta",
+    "indexless_tool_call",
+    "name_and_arguments_in_one_chunk",
+    "usage"
+   ],
+   "source": "https://github.com/vercel/ai/blob/beccad37665bbc56afd85542a932e430bdbc4e2e/packages/mistral/src/__fixtures__/mistral-tool-call.chunks.txt",
+   "losses": [
+    {
+     "kind": "error",
+     "detail": "ValueError: Tool call index is not provided in tool delta: ChatMessageToolCallStreamDelta(index=None, id='gSIMJiOkT', type=None, function=ChoiceDeltaToolCallFunction(arguments='{\"location\": \"San Francisco\"}', name='weather')) @ C:\\Users\\Matthew\\_lsc_fw\\a\\Lib\\site-packages\\smolagents\\models.py:258"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": null,
+    "usage_supported": true,
+    "error": "ValueError: Tool call index is not provided in tool delta: ChatMessageToolCallStreamDelta(index=None, id='gSIMJiOkT', type=None, function=ChoiceDeltaToolCallFunction(arguments='{\"location\": \"San Francisco\"}', name='weather')) @ C:\\Users\\Matthew\\_lsc_fw\\a\\Lib\\site-packages\\smolagents\\models.py:258"
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "smolagents.openai",
+   "case": "openai-chat--pydantic-ai--test-compatible-api-gemini-3-tool-call-thought-signature-true--0",
+   "protocol": "openai-chat",
+   "provider": "openai",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "indexless_tool_call",
+    "name_and_arguments_in_one_chunk",
+    "parallel_tool_calls",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_openai/test_compatible_api_gemini_3_tool_call_thought_signature[True].yaml",
+   "losses": [
+    {
+     "kind": "error",
+     "detail": "ValueError: Tool call index is not provided in tool delta: ChatMessageToolCallStreamDelta(index=None, id='call_108766', type='function', function=ChoiceDeltaToolCallFunction(arguments='{\"city\":\"Taipei\"}', name='get_weather')) @ C:\\Users\\Matthew\\_lsc_fw\\a\\Lib\\site-packages\\smolagents\\models.py:258"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": null,
+    "usage_supported": true,
+    "error": "ValueError: Tool call index is not provided in tool delta: ChatMessageToolCallStreamDelta(index=None, id='call_108766', type='function', function=ChoiceDeltaToolCallFunction(arguments='{\"city\":\"Taipei\"}', name='get_weather')) @ C:\\Users\\Matthew\\_lsc_fw\\a\\Lib\\site-packages\\smolagents\\models.py:258"
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "smolagents.openai",
+   "case": "openai-chat--pydantic-ai--test-mistral-stream-parallel-tool-calls-zai-glm-5-3--0",
+   "protocol": "openai-chat",
+   "provider": "mistral",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "multiple_tool_calls_in_one_chunk",
+    "name_and_arguments_in_one_chunk",
+    "parallel_tool_calls",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_mistral/test_mistral_stream_parallel_tool_calls[zai-glm-5-3].yaml",
+   "losses": [
+    {
+     "kind": "error",
+     "detail": "TypeError: can only concatenate str (not \"list\") to str @ C:\\Users\\Matthew\\_lsc_fw\\a\\Lib\\site-packages\\smolagents\\models.py:235"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": null,
+    "usage_supported": true,
+    "error": "TypeError: can only concatenate str (not \"list\") to str @ C:\\Users\\Matthew\\_lsc_fw\\a\\Lib\\site-packages\\smolagents\\models.py:235"
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "smolagents.litellm",
+   "case": "openai-chat--pydantic-ai--test-compatible-api-gemini-3-tool-call-thought-signature-true--0",
+   "protocol": "openai-chat",
+   "provider": "openai",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "indexless_tool_call",
+    "name_and_arguments_in_one_chunk",
+    "parallel_tool_calls",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_openai/test_compatible_api_gemini_3_tool_call_thought_signature[True].yaml",
+   "losses": [
+    {
+     "kind": "merged_tool_calls",
+     "detail": "2 calls in the stream came out as 1: get_weather({\"__unparseable__\": \"{\\\"city\\\":\\\"Taipei\\\"}{\\\"city\\\":\\\"Kaohsiung\\\"}\"})"
+    }
+   ],
+   "observed": {
+    "tool_calls": [
+     {
+      "name": "get_weather",
+      "arguments": "{\"city\":\"Taipei\"}{\"city\":\"Kaohsiung\"}",
+      "id": "call_108772"
+     }
+    ],
+    "usage": {
+     "input_tokens": 74,
+     "output_tokens": 36
+    },
+    "usage_supported": true,
+    "error": null
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "crewai",
+   "case": "openai-chat--pydantic-ai--test-compatible-api-gemini-3-tool-call-thought-signature-true--0",
+   "protocol": "openai-chat",
+   "provider": "openai",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "indexless_tool_call",
+    "name_and_arguments_in_one_chunk",
+    "parallel_tool_calls",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_openai/test_compatible_api_gemini_3_tool_call_thought_signature[True].yaml",
+   "losses": [
+    {
+     "kind": "merged_tool_calls",
+     "detail": "2 calls in the stream came out as 1: get_weather({\"__unparseable__\": \"{\\\"city\\\":\\\"Taipei\\\"}{\\\"city\\\":\\\"Kaohsiung\\\"}\"})"
+    }
+   ],
+   "observed": {
+    "tool_calls": [
+     {
+      "name": "get_weather",
+      "arguments": "{\"city\":\"Taipei\"}{\"city\":\"Kaohsiung\"}",
+      "id": "call_108766"
+     }
+    ],
+    "usage": {
+     "input_tokens": 74,
+     "output_tokens": 36
+    },
+    "usage_supported": true,
+    "error": null
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "crewai",
+   "case": "openai-chat--pydantic-ai--test-mistral-stream-parallel-tool-calls-zai-glm-5-3--0",
+   "protocol": "openai-chat",
+   "provider": "mistral",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "multiple_tool_calls_in_one_chunk",
+    "name_and_arguments_in_one_chunk",
+    "parallel_tool_calls",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_mistral/test_mistral_stream_parallel_tool_calls[zai-glm-5-3].yaml",
+   "losses": [
+    {
+     "kind": "error",
+     "detail": "TypeError: can only concatenate str (not \"list\") to str @ C:\\Users\\Matthew\\_lsc_fw\\b\\Lib\\site-packages\\crewai\\llms\\providers\\openai\\completion.py:2737"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": null,
+    "usage_supported": true,
+    "error": "TypeError: can only concatenate str (not \"list\") to str @ C:\\Users\\Matthew\\_lsc_fw\\b\\Lib\\site-packages\\crewai\\llms\\providers\\openai\\completion.py:2737"
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "semantic-kernel.openai",
+   "case": "openai-chat--pydantic-ai--test-mistral-stream-parallel-tool-calls-zai-glm-5-3--0",
+   "protocol": "openai-chat",
+   "provider": "mistral",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "multiple_tool_calls_in_one_chunk",
+    "name_and_arguments_in_one_chunk",
+    "parallel_tool_calls",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_mistral/test_mistral_stream_parallel_tool_calls[zai-glm-5-3].yaml",
+   "losses": [
+    {
+     "kind": "error",
+     "detail": "ValidationError: 1 validation error for StreamingTextContent\ntext\n  Input should be a valid string [type=string_type, input_value=[{'type': 'thinking', 'th...The'}], 'closed': True}], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type @ C:\\Users\\Matthew\\_lsc_fw\\c\\Lib\\site-packages\\pydantic\\main.py:263"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": null,
+    "usage_supported": true,
+    "error": "ValidationError: 1 validation error for StreamingTextContent\ntext\n  Input should be a valid string [type=string_type, input_value=[{'type': 'thinking', 'th...The'}], 'closed': True}], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type @ C:\\Users\\Matthew\\_lsc_fw\\c\\Lib\\site-packages\\pydantic\\main.py:263"
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "agno.openai",
+   "case": "openai-chat--ai--mistral-tool-call-chunks",
+   "protocol": "openai-chat",
+   "provider": "mistral",
+   "features": [
+    "empty_delta",
+    "indexless_tool_call",
+    "name_and_arguments_in_one_chunk",
+    "usage"
+   ],
+   "source": "https://github.com/vercel/ai/blob/beccad37665bbc56afd85542a932e430bdbc4e2e/packages/mistral/src/__fixtures__/mistral-tool-call.chunks.txt",
+   "losses": [
+    {
+     "kind": "dropped_tool_call",
+     "detail": "1 calls in the stream, 0 surfaced; missing ['weather']"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": null,
+    "usage_supported": false,
+    "error": null
+   },
+   "usage_checked": false
+  },
+  {
+   "adapter": "agno.openai",
+   "case": "openai-chat--pydantic-ai--test-compatible-api-gemini-3-tool-call-thought-signature-true--0",
+   "protocol": "openai-chat",
+   "provider": "openai",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "indexless_tool_call",
+    "name_and_arguments_in_one_chunk",
+    "parallel_tool_calls",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_openai/test_compatible_api_gemini_3_tool_call_thought_signature[True].yaml",
+   "losses": [
+    {
+     "kind": "dropped_tool_call",
+     "detail": "2 calls in the stream, 0 surfaced; missing ['get_weather', 'get_weather']"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": null,
+    "usage_supported": false,
+    "error": null
+   },
+   "usage_checked": false
+  },
+  {
+   "adapter": "agno.openai",
+   "case": "openai-chat--pydantic-ai--test-mistral-stream-parallel-tool-calls-zai-glm-5-3--0",
+   "protocol": "openai-chat",
+   "provider": "mistral",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "multiple_tool_calls_in_one_chunk",
+    "name_and_arguments_in_one_chunk",
+    "parallel_tool_calls",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_mistral/test_mistral_stream_parallel_tool_calls[zai-glm-5-3].yaml",
+   "losses": [
+    {
+     "kind": "dropped_tool_call",
+     "detail": "3 calls in the stream, 0 surfaced; missing ['get_weather', 'get_weather', 'get_time']"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": null,
+    "usage_supported": false,
+    "error": null
+   },
+   "usage_checked": false
+  },
+  {
+   "adapter": "llm.openai",
+   "case": "openai-chat--pydantic-ai--test-mistral-stream-parallel-tool-calls-zai-glm-5-3--0",
+   "protocol": "openai-chat",
+   "provider": "mistral",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "multiple_tool_calls_in_one_chunk",
+    "name_and_arguments_in_one_chunk",
+    "parallel_tool_calls",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_mistral/test_mistral_stream_parallel_tool_calls[zai-glm-5-3].yaml",
+   "losses": [
+    {
+     "kind": "error",
+     "detail": "TypeError: can only concatenate str (not \"list\") to str @ C:\\Users\\Matthew\\_lsc_fw\\d\\Lib\\site-packages\\llm\\default_plugins\\openai_models.py:3347"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": null,
+    "usage_supported": true,
+    "error": "TypeError: can only concatenate str (not \"list\") to str @ C:\\Users\\Matthew\\_lsc_fw\\d\\Lib\\site-packages\\llm\\default_plugins\\openai_models.py:3347"
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "strands.openai",
+   "case": "openai-chat--pydantic-ai--test-compatible-api-gemini-3-tool-call-thought-signature-true--0",
+   "protocol": "openai-chat",
+   "provider": "openai",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "indexless_tool_call",
+    "name_and_arguments_in_one_chunk",
+    "parallel_tool_calls",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_openai/test_compatible_api_gemini_3_tool_call_thought_signature[True].yaml",
+   "losses": [
+    {
+     "kind": "merged_tool_calls",
+     "detail": "2 calls in the stream came out as 1: get_weather({})"
+    }
+   ],
+   "observed": {
+    "tool_calls": [
+     {
+      "name": "get_weather",
+      "arguments": {},
+      "id": "call_108766"
+     }
+    ],
+    "usage": {
+     "input_tokens": 74,
+     "output_tokens": 36
+    },
+    "usage_supported": true,
+    "error": null
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "strands.openai",
+   "case": "openai-chat--pydantic-ai--test-mistral-stream-parallel-tool-calls-zai-glm-5-3--0",
+   "protocol": "openai-chat",
+   "provider": "mistral",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "multiple_tool_calls_in_one_chunk",
+    "name_and_arguments_in_one_chunk",
+    "parallel_tool_calls",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_mistral/test_mistral_stream_parallel_tool_calls[zai-glm-5-3].yaml",
+   "losses": [
+    {
+     "kind": "error",
+     "detail": "TypeError: can only concatenate str (not \"list\") to str @ C:\\Users\\Matthew\\_lsc_fw\\e\\Lib\\site-packages\\strands\\event_loop\\streaming.py:246"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": null,
+    "usage_supported": true,
+    "error": "TypeError: can only concatenate str (not \"list\") to str @ C:\\Users\\Matthew\\_lsc_fw\\e\\Lib\\site-packages\\strands\\event_loop\\streaming.py:246"
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "strands.litellm",
+   "case": "openai-chat--pydantic-ai--test-compatible-api-gemini-3-tool-call-thought-signature-true--0",
+   "protocol": "openai-chat",
+   "provider": "openai",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "indexless_tool_call",
+    "name_and_arguments_in_one_chunk",
+    "parallel_tool_calls",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_openai/test_compatible_api_gemini_3_tool_call_thought_signature[True].yaml",
+   "losses": [
+    {
+     "kind": "merged_tool_calls",
+     "detail": "2 calls in the stream came out as 1: get_weather({})"
+    }
+   ],
+   "observed": {
+    "tool_calls": [
+     {
+      "name": "get_weather",
+      "arguments": {},
+      "id": "call_108766"
+     }
+    ],
+    "usage": {
+     "input_tokens": 74,
+     "output_tokens": 36
+    },
+    "usage_supported": true,
+    "error": null
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "autogen.anthropic",
+   "case": "anthropic--ai--anthropic-tool-search-bm25-1-chunks--r1",
+   "protocol": "anthropic",
+   "provider": "anthropic",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "ping_event",
+    "tool_call_index_gap",
+    "usage",
+    "usage_restated_in_message_delta"
+   ],
+   "source": "https://github.com/vercel/ai/blob/beccad37665bbc56afd85542a932e430bdbc4e2e/packages/anthropic/src/__fixtures__/anthropic-tool-search-bm25.1.chunks.txt",
+   "losses": [
+    {
+     "kind": "wrong_usage",
+     "detail": "input 699 != 1630"
+    }
+   ],
+   "observed": {
+    "tool_calls": [
+     {
+      "name": "get_weather",
+      "arguments": "{\"location\": \"San Francisco, CA\"}",
+      "id": "toolu_019nRrfqqXcU5NPTUSYfEMAY"
+     }
+    ],
+    "usage": {
+     "input_tokens": 699,
+     "output_tokens": 158
+    },
+    "usage_supported": true,
+    "error": null
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "autogen.anthropic",
+   "case": "anthropic--ai--anthropic-tool-search-regex-1-chunks--r1",
+   "protocol": "anthropic",
+   "provider": "anthropic",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "tool_call_index_gap",
+    "usage",
+    "usage_restated_in_message_delta"
+   ],
+   "source": "https://github.com/vercel/ai/blob/beccad37665bbc56afd85542a932e430bdbc4e2e/packages/anthropic/src/__fixtures__/anthropic-tool-search-regex.1.chunks.txt",
+   "losses": [
+    {
+     "kind": "wrong_usage",
+     "detail": "input 722 != 1681"
+    }
+   ],
+   "observed": {
+    "tool_calls": [
+     {
+      "name": "get_temp_data",
+      "arguments": "{\"location\": \"San Francisco, CA\"}",
+      "id": "toolu_01UmPwkecewaEpMupy2ywk8b"
+     }
+    ],
+    "usage": {
+     "input_tokens": 722,
+     "output_tokens": 163
+    },
+    "usage_supported": true,
+    "error": null
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "autogen.anthropic",
+   "case": "anthropic--pydantic-ai--test-anthropic-count-tokens-before-request-with-every-tool-deferred--0",
+   "protocol": "anthropic",
+   "provider": "anthropic",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "ping_event",
+    "tool_call_index_gap",
+    "usage",
+    "usage_restated_in_message_delta"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_anthropic/test_anthropic_count_tokens_before_request_with_every_tool_deferred.yaml",
+   "losses": [
+    {
+     "kind": "wrong_usage",
+     "detail": "input 669 != 1529"
+    }
+   ],
+   "observed": {
+    "tool_calls": [
+     {
+      "name": "get_exchange_rate",
+      "arguments": "{\"base\": \"USD\", \"quote\": \"EUR\"}",
+      "id": "toolu_01PScU4cPJzWK2MNykq7Y1u4"
+     }
+    ],
+    "usage": {
+     "input_tokens": 669,
+     "output_tokens": 144
+    },
+    "usage_supported": true,
+    "error": null
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "autogen.anthropic",
+   "case": "anthropic--pydantic-ai--test-anthropic-native-tool-search-round-trip--0",
+   "protocol": "anthropic",
+   "provider": "anthropic",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "ping_event",
+    "tool_call_index_gap",
+    "usage",
+    "usage_restated_in_message_delta"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/cassettes/test_tool_search/test_anthropic_native_tool_search_round_trip.yaml",
+   "losses": [
+    {
+     "kind": "wrong_usage",
+     "detail": "input 667 != 1536"
+    }
+   ],
+   "observed": {
+    "tool_calls": [
+     {
+      "name": "get_exchange_rate",
+      "arguments": "{\"from_currency\": \"USD\", \"to_currency\": \"EUR\"}",
+      "id": "toolu_01FounYuoz2A9xzJ4nfTefxi"
+     }
+    ],
+    "usage": {
+     "input_tokens": 667,
+     "output_tokens": 149
+    },
+    "usage_supported": true,
+    "error": null
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "autogen.anthropic",
+   "case": "anthropic--pydantic-ai--test-anthropic-native-tool-search-streaming--0",
+   "protocol": "anthropic",
+   "provider": "anthropic",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "ping_event",
+    "tool_call_index_gap",
+    "usage",
+    "usage_restated_in_message_delta"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/cassettes/test_tool_search/test_anthropic_native_tool_search_streaming.yaml",
+   "losses": [
+    {
+     "kind": "wrong_usage",
+     "detail": "input 667 != 1535"
+    }
+   ],
+   "observed": {
+    "tool_calls": [
+     {
+      "name": "get_exchange_rate",
+      "arguments": "{\"from_currency\": \"USD\", \"to_currency\": \"EUR\"}",
+      "id": "toolu_01VnWKv3yno9VMx89wM4jEMB"
+     }
+    ],
+    "usage": {
+     "input_tokens": 667,
+     "output_tokens": 148
+    },
+    "usage_supported": true,
+    "error": null
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "autogen.anthropic",
+   "case": "anthropic--pydantic-ai--test-anthropic-tool-search-replays-every-input-field-false--0",
+   "protocol": "anthropic",
+   "provider": "anthropic",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "ping_event",
+    "thinking_block",
+    "tool_call_index_gap",
+    "usage",
+    "usage_restated_in_message_delta"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/anthropic/cassettes/test_tool_search/test_anthropic_tool_search_replays_every_input_field[False].yaml",
+   "losses": [
+    {
+     "kind": "wrong_usage",
+     "detail": "input 737 != 1663"
+    }
+   ],
+   "observed": {
+    "tool_calls": [
+     {
+      "name": "check_inventory",
+      "arguments": "{\"sku\": \"A1\"}",
+      "id": "toolu_01GjkEbvhowVzxsFiec6RhUM"
+     }
+    ],
+    "usage": {
+     "input_tokens": 737,
+     "output_tokens": 386
+    },
+    "usage_supported": true,
+    "error": null
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "autogen.anthropic",
+   "case": "anthropic--pydantic-ai--test-anthropic-tool-search-replays-every-input-field-true--0",
+   "protocol": "anthropic",
+   "provider": "anthropic",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "ping_event",
+    "thinking_block",
+    "tool_call_index_gap",
+    "usage",
+    "usage_restated_in_message_delta"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/anthropic/cassettes/test_tool_search/test_anthropic_tool_search_replays_every_input_field[True].yaml",
+   "losses": [
+    {
+     "kind": "wrong_usage",
+     "detail": "input 737 != 1663"
+    }
+   ],
+   "observed": {
+    "tool_calls": [
+     {
+      "name": "check_inventory",
+      "arguments": "{\"sku\": \"A1\"}",
+      "id": "toolu_01UMoDouZCtfVcEF92g8U7TG"
+     }
+    ],
+    "usage": {
+     "input_tokens": 737,
+     "output_tokens": 408
+    },
+    "usage_supported": true,
+    "error": null
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "autogen.anthropic",
+   "case": "anthropic--pydantic-ai--test-live-tool-search-handoff-anthropic-openai-anthropic--0",
+   "protocol": "anthropic",
+   "provider": "anthropic",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "ping_event",
+    "tool_call_index_gap",
+    "usage",
+    "usage_restated_in_message_delta"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/cassettes/test_tool_search/test_live_tool_search_handoff_anthropic_openai_anthropic.yaml",
+   "losses": [
+    {
+     "kind": "wrong_usage",
+     "detail": "input 690 != 1552"
+    }
+   ],
+   "observed": {
+    "tool_calls": [
+     {
+      "name": "get_exchange_rate",
+      "arguments": "{\"pair\": \"USD/EUR\"}",
+      "id": "toolu_01Q8zNbfshajbtNsdiE4qMVV"
+     }
+    ],
+    "usage": {
+     "input_tokens": 690,
+     "output_tokens": 120
+    },
+    "usage_supported": true,
+    "error": null
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "autogen.anthropic",
+   "case": "anthropic--pydantic-ai--test-live-tool-search-handoff-anthropic-to-openai--0",
+   "protocol": "anthropic",
+   "provider": "anthropic",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "ping_event",
+    "tool_call_index_gap",
+    "usage",
+    "usage_restated_in_message_delta"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/cassettes/test_tool_search/test_live_tool_search_handoff_anthropic_to_openai.yaml",
+   "losses": [
+    {
+     "kind": "wrong_usage",
+     "detail": "input 690 != 1552"
+    }
+   ],
+   "observed": {
+    "tool_calls": [
+     {
+      "name": "get_exchange_rate",
+      "arguments": "{\"pair\": \"USD/EUR\"}",
+      "id": "toolu_01Y5oovSeo2iVs55xQaUJZSH"
+     }
+    ],
+    "usage": {
+     "input_tokens": 690,
+     "output_tokens": 120
+    },
+    "usage_supported": true,
+    "error": null
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "vercel-ai.openai-chat",
+   "case": "openai-chat--ai--mistral-tool-call-chunks",
+   "protocol": "openai-chat",
+   "provider": "mistral",
+   "features": [
+    "empty_delta",
+    "indexless_tool_call",
+    "name_and_arguments_in_one_chunk",
+    "usage"
+   ],
+   "source": "https://github.com/vercel/ai/blob/beccad37665bbc56afd85542a932e430bdbc4e2e/packages/mistral/src/__fixtures__/mistral-tool-call.chunks.txt",
+   "losses": [
+    {
+     "kind": "error",
+     "detail": "AI_TypeValidationError: Type validation failed: Value: {\"id\":\"b3999b8c93e04e11bcbff7bcab829667\",\"object\":\"chat.completion.chunk\",\"created\":1769088854,\"model\":\"mistral-small-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":null,\"tool_calls\":[{\"id\":\"gSIMJiOkT\",\"function\":{\"name\":\"weather\",\"arguments\":\"{\\\"location\\\": \\\"San Francisco\\\"}\"}}]},\"finish_reason\":\"tool_calls\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":124,\"total_t"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": null,
+    "usage_supported": true,
+    "error": "AI_TypeValidationError: Type validation failed: Value: {\"id\":\"b3999b8c93e04e11bcbff7bcab829667\",\"object\":\"chat.completion.chunk\",\"created\":1769088854,\"model\":\"mistral-small-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":null,\"tool_calls\":[{\"id\":\"gSIMJiOkT\",\"function\":{\"name\":\"weather\",\"arguments\":\"{\\\"location\\\": \\\"San Francisco\\\"}\"}}]},\"finish_reason\":\"tool_calls\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":124,\"total_t"
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "vercel-ai.openai-chat",
+   "case": "openai-chat--pydantic-ai--test-compatible-api-gemini-3-tool-call-thought-signature-true--0",
+   "protocol": "openai-chat",
+   "provider": "openai",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "indexless_tool_call",
+    "name_and_arguments_in_one_chunk",
+    "parallel_tool_calls",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_openai/test_compatible_api_gemini_3_tool_call_thought_signature[True].yaml",
+   "losses": [
+    {
+     "kind": "error",
+     "detail": "AI_TypeValidationError: Type validation failed: Value: {\"choices\":[{\"delta\":{\"role\":\"assistant\",\"tool_calls\":[{\"function\":{\"arguments\":\"{\\\"city\\\":\\\"Kaohsiung\\\"}\",\"name\":\"get_weather\"},\"id\":\"call_108772\",\"type\":\"function\"}]},\"index\":0}],\"created\":1791940063,\"id\":\"3tXOasW2I-2KmtkPrtulEA\",\"model\":\"gemini-3.1-flash-lite\",\"object\":\"chat.completion.chunk\",\"usage\":{\"completion_tokens\":36,\"prompt_tokens\":74,\"total_tokens\":110}}."
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": null,
+    "usage_supported": true,
+    "error": "AI_TypeValidationError: Type validation failed: Value: {\"choices\":[{\"delta\":{\"role\":\"assistant\",\"tool_calls\":[{\"function\":{\"arguments\":\"{\\\"city\\\":\\\"Kaohsiung\\\"}\",\"name\":\"get_weather\"},\"id\":\"call_108772\",\"type\":\"function\"}]},\"index\":0}],\"created\":1791940063,\"id\":\"3tXOasW2I-2KmtkPrtulEA\",\"model\":\"gemini-3.1-flash-lite\",\"object\":\"chat.completion.chunk\",\"usage\":{\"completion_tokens\":36,\"prompt_tokens\":74,\"total_tokens\":110}}."
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "vercel-ai.openai-chat",
+   "case": "openai-chat--pydantic-ai--test-mistral-stream-parallel-tool-calls-zai-glm-5-3--0",
+   "protocol": "openai-chat",
+   "provider": "mistral",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "multiple_tool_calls_in_one_chunk",
+    "name_and_arguments_in_one_chunk",
+    "parallel_tool_calls",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_mistral/test_mistral_stream_parallel_tool_calls[zai-glm-5-3].yaml",
+   "losses": [
+    {
+     "kind": "error",
+     "detail": "AI_TypeValidationError: Type validation failed: Value: {\"id\":\"032662f9522949949b473cfadd932705\",\"object\":\"chat.completion.chunk\",\"created\":1793745184,\"model\":\"zai-glm-5-3\",\"choices\":[{\"index\":0,\"delta\":{\"index\":0,\"content\":[{\"type\":\"thinking\",\"thinking\":[{\"type\":\"text\",\"text\":\"_calls block.\"}],\"closed\":true},{\"type\":\"text\",\"text\":\"I\"}]},\"finish_reason\":null,\"logprobs\":null}]}.\nError message: [\n  {\n    \"code\": \"invalid_un"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": null,
+    "usage_supported": true,
+    "error": "AI_TypeValidationError: Type validation failed: Value: {\"id\":\"032662f9522949949b473cfadd932705\",\"object\":\"chat.completion.chunk\",\"created\":1793745184,\"model\":\"zai-glm-5-3\",\"choices\":[{\"index\":0,\"delta\":{\"index\":0,\"content\":[{\"type\":\"thinking\",\"thinking\":[{\"type\":\"text\",\"text\":\"_calls block.\"}],\"closed\":true},{\"type\":\"text\",\"text\":\"I\"}]},\"finish_reason\":null,\"logprobs\":null}]}.\nError message: [\n  {\n    \"code\": \"invalid_un"
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "openai-node.chat",
+   "case": "openai-chat--ai--mistral-incremental-tool-call-chunks",
+   "protocol": "openai-chat",
+   "provider": "mistral",
+   "features": [
+    "usage"
+   ],
+   "source": "https://github.com/vercel/ai/blob/beccad37665bbc56afd85542a932e430bdbc4e2e/packages/mistral/src/__fixtures__/mistral-incremental-tool-call.chunks.txt",
+   "losses": [
+    {
+     "kind": "error",
+     "detail": "Error: missing role for choice 0"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": null,
+    "usage_supported": true,
+    "error": "Error: missing role for choice 0"
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "openai-node.chat",
+   "case": "openai-chat--ai--mistral-tool-call-chunks",
+   "protocol": "openai-chat",
+   "provider": "mistral",
+   "features": [
+    "empty_delta",
+    "indexless_tool_call",
+    "name_and_arguments_in_one_chunk",
+    "usage"
+   ],
+   "source": "https://github.com/vercel/ai/blob/beccad37665bbc56afd85542a932e430bdbc4e2e/packages/mistral/src/__fixtures__/mistral-tool-call.chunks.txt",
+   "losses": [
+    {
+     "kind": "error",
+     "detail": "Error: Chat completion stream contains an invalid tool call index: undefined"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": null,
+    "usage_supported": true,
+    "error": "Error: Chat completion stream contains an invalid tool call index: undefined"
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "openai-node.chat",
+   "case": "openai-chat--pydantic-ai--test-compatible-api-gemini-3-tool-call-thought-signature-true--0",
+   "protocol": "openai-chat",
+   "provider": "openai",
+   "features": [
+    "arguments_split_mid_json",
+    "empty_delta",
+    "indexless_tool_call",
+    "name_and_arguments_in_one_chunk",
+    "parallel_tool_calls",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_openai/test_compatible_api_gemini_3_tool_call_thought_signature[True].yaml",
+   "losses": [
+    {
+     "kind": "error",
+     "detail": "Error: Chat completion stream contains an invalid tool call index: undefined"
+    }
+   ],
+   "observed": {
+    "tool_calls": [],
+    "usage": null,
+    "usage_supported": true,
+    "error": "Error: Chat completion stream contains an invalid tool call index: undefined"
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "openai-node.responses",
+   "case": "openai-responses--pydantic-ai--test-codex-calls-additional-tool--0",
+   "protocol": "openai-responses",
+   "provider": "codex",
+   "features": [
+    "arguments_split_mid_json",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_openai_codex/test_codex_calls_additional_tool.yaml",
+   "losses": [
+    {
+     "kind": "dropped_tool_call",
+     "detail": "1 calls in the stream, 0 surfaced; missing ['lookup_refund_policy']"
+    }
+   ],
+   "observed": {
+    "usage_supported": true,
+    "error": null,
+    "tool_calls": [],
+    "usage": {
+     "input_tokens": 155,
+     "output_tokens": 23
+    }
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "openai-node.responses",
+   "case": "openai-responses--pydantic-ai--test-codex-deferred-tool-search--0",
+   "protocol": "openai-responses",
+   "provider": "codex",
+   "features": [
+    "tool_call_index_gap",
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_openai_codex/test_codex_deferred_tool_search.yaml",
+   "losses": [
+    {
+     "kind": "dropped_tool_call",
+     "detail": "1 calls in the stream, 0 surfaced; missing ['moo']"
+    }
+   ],
+   "observed": {
+    "usage_supported": true,
+    "error": null,
+    "tool_calls": [],
+    "usage": {
+     "input_tokens": 565,
+     "output_tokens": 33
+    }
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "openai-node.responses",
+   "case": "openai-responses--pydantic-ai--test-codex-tool-roundtrip-false--0",
+   "protocol": "openai-responses",
+   "provider": "codex",
+   "features": [
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_openai_codex/test_codex_tool_roundtrip[False].yaml",
+   "losses": [
+    {
+     "kind": "dropped_tool_call",
+     "detail": "1 calls in the stream, 0 surfaced; missing ['moo']"
+    }
+   ],
+   "observed": {
+    "usage_supported": true,
+    "error": null,
+    "tool_calls": [],
+    "usage": {
+     "input_tokens": 62,
+     "output_tokens": 14
+    }
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "openai-node.responses",
+   "case": "openai-responses--pydantic-ai--test-codex-tool-roundtrip-true--0",
+   "protocol": "openai-responses",
+   "provider": "codex",
+   "features": [
+    "usage"
+   ],
+   "source": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_openai_codex/test_codex_tool_roundtrip[True].yaml",
+   "losses": [
+    {
+     "kind": "dropped_tool_call",
+     "detail": "1 calls in the stream, 0 surfaced; missing ['moo']"
+    }
+   ],
+   "observed": {
+    "usage_supported": true,
+    "error": null,
+    "tool_calls": [],
+    "usage": {
+     "input_tokens": 62,
+     "output_tokens": 14
+    }
+   },
+   "usage_checked": true
+  },
+  {
+   "adapter": "langchainjs.openai",
+   "case": "openai-chat--ai--mistral-incremental-tool-call-chunks",
+   "protocol": "openai-chat",
+   "provider": "mistral",
+   "features": [
+    "usage"
+   ],
+   "source": "https://github.com/vercel/ai/blob/beccad37665bbc56afd85542a932e430bdbc4e2e/packages/mistral/src/__fixtures__/mistral-incremental-tool-call.chunks.txt",
+   "losses": [
+    {
+     "kind": "dropped_tool_call",
+     "detail": "1 calls in the stream, 0 surfaced; missing ['webSearchTool']"
+    },
+    {
+     "kind": "lost_usage",
+     "detail": "provider reported 171 in / 14 out; framework surfaced none"
+    }
+   ],
+   "observed": {
+    "usage_supported": true,
+    "error": null,
+    "tool_calls": [],
+    "usage": null
+   },
+   "usage_checked": true
+  }
+ ]
+}

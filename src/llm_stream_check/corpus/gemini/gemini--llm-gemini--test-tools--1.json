@@ -1,0 +1,34 @@
+{
+ "id": "gemini--llm-gemini--test-tools--1",
+ "protocol": "gemini",
+ "provider": "google",
+ "model": "gemini-2.5-flash",
+ "core": true,
+ "source": {
+  "repo": "simonw/llm-gemini",
+  "commit": "bb8987c66cb4a76787252ee068a2b60cfa515c35",
+  "path": "tests/cassettes/test_gemini/test_tools.yaml",
+  "interaction": 1,
+  "split_from_multi_response_recording": false,
+  "url": "https://github.com/simonw/llm-gemini/blob/bb8987c66cb4a76787252ee068a2b60cfa515c35/tests/cassettes/test_gemini/test_tools.yaml"
+ },
+ "features": [
+  "tool_call_without_arguments",
+  "usage"
+ ],
+ "expected": {
+  "tool_calls": [
+   {
+    "id": null,
+    "name": "pelican_name_generator",
+    "arguments": {}
+   }
+  ],
+  "usage": {
+   "input_tokens": 105,
+   "output_tokens": 13
+  }
+ },
+ "sha256": "2745234c156413175e1f38bca09de89130a27aeeee904a8f3948bdd2c69b595b",
+ "body": "data: {\"candidates\":[{\"content\":{\"parts\":[{\"functionCall\":{\"name\":\"pelican_name_generator\",\"args\":{}}}],\"role\":\"model\"},\"finishReason\":\"STOP\",\"index\":0,\"finishMessage\":\"Model generated function call(s).\"}],\"usageMetadata\":{\"promptTokenCount\":105,\"candidatesTokenCount\":13,\"totalTokenCount\":118,\"promptTokensDetails\":[{\"modality\":\"TEXT\",\"tokenCount\":105}],\"serviceTier\":\"standard\"},\"modelVersion\":\"gemini-2.5-flash\",\"responseId\":\"OopyavzdMqTQjrEPqLCdqAc\"}\n\n"
+}

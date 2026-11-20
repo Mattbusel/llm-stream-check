@@ -1,0 +1,53 @@
+{
+ "id": "openai-chat--pydantic-ai--test-mistral-stream-parallel-tool-calls-mistral-small-latest--0",
+ "protocol": "openai-chat",
+ "provider": "mistral",
+ "model": "mistral-small-latest",
+ "core": true,
+ "source": {
+  "repo": "pydantic/pydantic-ai",
+  "commit": "ebcaf6586c12885ea19f4e63cbe306e7527d00e1",
+  "path": "tests/models/cassettes/test_mistral/test_mistral_stream_parallel_tool_calls[mistral-small-latest].yaml",
+  "interaction": 0,
+  "split_from_multi_response_recording": false,
+  "url": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_mistral/test_mistral_stream_parallel_tool_calls[mistral-small-latest].yaml"
+ },
+ "features": [
+  "empty_delta",
+  "multiple_tool_calls_in_one_chunk",
+  "name_and_arguments_in_one_chunk",
+  "parallel_tool_calls",
+  "usage"
+ ],
+ "expected": {
+  "tool_calls": [
+   {
+    "id": "Fi65w8Plu",
+    "name": "get_weather",
+    "arguments": {
+     "city": "Paris"
+    }
+   },
+   {
+    "id": "NpJQUR1bV",
+    "name": "get_weather",
+    "arguments": {
+     "city": "London"
+    }
+   },
+   {
+    "id": "lPaisIfGU",
+    "name": "get_time",
+    "arguments": {
+     "tz": "UTC"
+    }
+   }
+  ],
+  "usage": {
+   "input_tokens": 155,
+   "output_tokens": 33
+  }
+ },
+ "sha256": "4e927472ccd56b46af2ebbf458560af802950f968b1001f1dd63efa31b66b3d6",
+ "body": "data: {\"id\":\"8ba30f07ee22440ea3b52df81fad3686\",\"object\":\"chat.completion.chunk\",\"created\":1793745181,\"model\":\"mistral-small-latest\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"8ba30f07ee22440ea3b52df81fad3686\",\"object\":\"chat.completion.chunk\",\"created\":1793745181,\"model\":\"mistral-small-latest\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"id\":\"Fi65w8Plu\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\": \\\"Paris\\\"}\"},\"index\":0},{\"id\":\"NpJQUR1bV\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\": \\\"London\\\"}\"},\"index\":1},{\"id\":\"lPaisIfGU\",\"type\":\"function\",\"function\":{\"name\":\"get_time\",\"arguments\":\"{\\\"tz\\\": \\\"UTC\\\"}\"},\"index\":2}]},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":155,\"total_tokens\":188,\"completion_tokens\":33,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":0},\"service_tier\":\"standard\"},\"p\":\"abcdefghijkl\"}\n\ndata: [DONE]\n\n"
+}

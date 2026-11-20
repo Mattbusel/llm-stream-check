@@ -1,0 +1,44 @@
+{
+ "id": "gemini--llm-gemini--test-tools-with-nested-pydantic-models--0",
+ "protocol": "gemini",
+ "provider": "google",
+ "model": "gemini-3.6-flash",
+ "core": true,
+ "source": {
+  "repo": "simonw/llm-gemini",
+  "commit": "bb8987c66cb4a76787252ee068a2b60cfa515c35",
+  "path": "tests/cassettes/test_gemini/test_tools_with_nested_pydantic_models.yaml",
+  "interaction": 0,
+  "split_from_multi_response_recording": false,
+  "url": "https://github.com/simonw/llm-gemini/blob/bb8987c66cb4a76787252ee068a2b60cfa515c35/tests/cassettes/test_gemini/test_tools_with_nested_pydantic_models.yaml"
+ },
+ "features": [
+  "thought_signature",
+  "usage",
+  "usage_only_final_chunk"
+ ],
+ "expected": {
+  "tool_calls": [
+   {
+    "id": "whZntcQw",
+    "name": "add_person",
+    "arguments": {
+     "age": 30,
+     "name": "Alice",
+     "address": {
+      "street": "123 Main St",
+      "city": "San Francisco",
+      "zipcode": "94102"
+     }
+    }
+   }
+  ],
+  "usage": {
+   "input_tokens": 201,
+   "output_tokens": 51,
+   "output_tokens_alt": 234
+  }
+ },
+ "sha256": "2e9c01c1a444df597fe235be2ed9f95ae176d1fa2fcc0320ff5a82fcade38819",
+ "body": "data: {\"candidates\":[{\"content\":{\"parts\":[{\"functionCall\":{\"name\":\"add_person\",\"args\":{\"age\":30,\"name\":\"Alice\",\"address\":{\"street\":\"123 Main St\",\"city\":\"San Francisco\",\"zipcode\":\"94102\"}},\"id\":\"whZntcQw\"},\"thoughtSignature\":\"EsYFCsMFARFNMg/JPnxoLqVvMVemTTo3utkRj4R30ZEOXUZF2P7Sm0CZamziRafLtKuxVUpCkTH9K33YoUiPx6VziNQFmpMKhJAb5eqW+MlOBmFn0zruDf2D+0oaMvR4VoQVxUAQDh4NsOGITPjZuUDOEbxvuxmqLaHK2PlEX3XZCFzQmOcyRevCh7x6GS16w3Lad4ZsurIliaJ5gOHaS1UZPaeARXvZmycAVbrRPg0Xxdp1BgcieAO4z9fUtt2KdCKZMba576zhXmEwNuzAvLPX0E0CQ+y3BRjI+1w+vIOSyLFn4cUkku7LP9ATlV2DX1v5q+ZRer/csOaSeY8R0ZOVaPTjRvPGkdZLs7mxKQ8l88nPLAZihExZl11UOwq0gYbVUUmeqrTDGcpcLjhv78/UtIF2vup3VzTrwhzx3rKt0mbqAlol8smXX5Bd0Dn18xMqttk+tz61vg/7hTX27MJCV6bOopeCMC3U0xAUUYb1wCr6GpHxgUbtW8TyyKu6IwJix1RXycDja/rqldGnIYRC/dsjtQYu9UwQbloG1MK0y7lLduPVyqaL9FDN5qandyLwdjMbEPh7P90PWWQcfEIVhR+tIzrhJGsK/2XybEO097q8f5/BH7PcDink9q6xvQiCPG3Yn+DFHmvvfKtYufirDuC3Hh+BSz017nn/2rrJpxzk1EZ8sLhsRI90ycNvACE9QPp+pTo1al1und93CY8vwvJxrGvdxe21UuqsKTWRoz8bqmrmP8UMZWOYdcrlCzbqR1AAuMh5TH8AiRQW5xOAkBdZQGStPN7bot2K4Z+CZ6YeWy8n750wJ8xN8LKgrWf46yu/vTY26X4cIGb8V2w0tb9AUx2U+fDm6yWMxxdayuZa3p9519RKF5ojIx3bHxOVfXgxXRXsT3i2dqsHIy84sirV1vpJURMX6McJ4IcVdVRG3FmBog0=\"}],\"role\":\"model\"},\"index\":0}],\"usageMetadata\":{\"promptTokenCount\":201,\"candidatesTokenCount\":51,\"totalTokenCount\":435,\"promptTokensDetails\":[{\"modality\":\"TEXT\",\"tokenCount\":201}],\"thoughtsTokenCount\":183,\"serviceTier\":\"standard\"},\"modelVersion\":\"gemini-3.6-flash\",\"responseId\":\"l4pyarrSEcupjrEPvJaO4A0\"}\n\ndata: {\"candidates\":[{\"content\":{\"parts\":[{\"text\":\"\"}],\"role\":\"model\"},\"finishReason\":\"STOP\",\"index\":0}],\"usageMetadata\":{\"promptTokenCount\":201,\"candidatesTokenCount\":51,\"totalTokenCount\":435,\"promptTokensDetails\":[{\"modality\":\"TEXT\",\"tokenCount\":201}],\"thoughtsTokenCount\":183,\"serviceTier\":\"standard\"},\"modelVersion\":\"gemini-3.6-flash\",\"responseId\":\"l4pyarrSEcupjrEPvJaO4A0\"}\n\n"
+}

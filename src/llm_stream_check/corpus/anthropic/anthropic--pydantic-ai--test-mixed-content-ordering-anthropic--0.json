@@ -1,0 +1,37 @@
+{
+ "id": "anthropic--pydantic-ai--test-mixed-content-ordering-anthropic--0",
+ "protocol": "anthropic",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5-5",
+ "core": true,
+ "source": {
+  "repo": "pydantic/pydantic-ai",
+  "commit": "ebcaf6586c12885ea19f4e63cbe306e7527d00e1",
+  "path": "tests/models/cassettes/test_multimodal_tool_returns/test_mixed_content_ordering[anthropic].yaml",
+  "interaction": 0,
+  "split_from_multi_response_recording": false,
+  "url": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_multimodal_tool_returns/test_mixed_content_ordering[anthropic].yaml"
+ },
+ "features": [
+  "empty_delta",
+  "ping_event",
+  "tool_call_without_arguments",
+  "usage",
+  "usage_restated_in_message_delta"
+ ],
+ "expected": {
+  "tool_calls": [
+   {
+    "id": "toolu_01BMT1YNQJ6RqffBzWdEyEE8",
+    "name": "get_mixed_content",
+    "arguments": {}
+   }
+  ],
+  "usage": {
+   "input_tokens": 364,
+   "output_tokens": 30
+  }
+ },
+ "sha256": "9fae027681810b0358280ff97a6e46e7ec6f5811964617c4c75514b907128944",
+ "body": "event: message_start\ndata: {\"type\":\"message_start\",\"message\":{\"model\":\"claude-sonnet-5-5\",\"id\":\"msg_011CgPGzCSbjVBrrwqQgRJkP\",\"type\":\"message\",\"role\":\"assistant\",\"content\":[],\"container\":null,\"stop_reason\":null,\"stop_sequence\":null,\"stop_details\":null,\"usage\":{\"input_tokens\":364,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":0},\"output_tokens\":24,\"service_tier\":\"standard\",\"inference_geo\":\"global\",\"speed\":\"standard\"},\"diagnostics\":null}               }\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":0,\"content_block\":{\"type\":\"tool_use\",\"id\":\"toolu_01BMT1YNQJ6RqffBzWdEyEE8\",\"name\":\"get_mixed_content\",\"input\":{},\"caller\":{\"type\":\"direct\"}}       }\n\nevent: ping\ndata: {\"type\": \"ping\"}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"\"}    }\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"index\":0}\n\nevent: message_delta\ndata: {\"type\":\"message_delta\",\"delta\":{\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"stop_details\":null,\"container\":null},\"usage\":{\"input_tokens\":364,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":30,\"output_tokens_details\":{\"thinking_tokens\":0}}     }\n\nevent: message_stop\ndata: {\"type\":\"message_stop\"               }\n\n"
+}

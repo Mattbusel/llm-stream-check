@@ -1,0 +1,37 @@
+{
+ "id": "anthropic--llm-anthropic--test-stream-events-tool-calls--0",
+ "protocol": "anthropic",
+ "provider": "anthropic",
+ "model": "claude-haiku-4-5-20251001",
+ "core": true,
+ "source": {
+  "repo": "simonw/llm-anthropic",
+  "commit": "30d4d939c4b48b45115c2c1a95332d1d0688277c",
+  "path": "tests/cassettes/test_anthropic/test_stream_events_tool_calls.yaml",
+  "interaction": 0,
+  "split_from_multi_response_recording": false,
+  "url": "https://github.com/simonw/llm-anthropic/blob/30d4d939c4b48b45115c2c1a95332d1d0688277c/tests/cassettes/test_anthropic/test_stream_events_tool_calls.yaml"
+ },
+ "features": [
+  "empty_delta",
+  "ping_event",
+  "tool_call_without_arguments",
+  "usage",
+  "usage_restated_in_message_delta"
+ ],
+ "expected": {
+  "tool_calls": [
+   {
+    "id": "toolu_01CzN6riCPqw4pVSuTd9Dwn7",
+    "name": "pelican_name_generator",
+    "arguments": {}
+   }
+  ],
+  "usage": {
+   "input_tokens": 543,
+   "output_tokens": 40
+  }
+ },
+ "sha256": "70a1e5b663488376833ad59d8bd37e43239c6a096409eb2e765b2cfc96d2792d",
+ "body": "event: message_start\ndata: {\"type\":\"message_start\",\"message\":{\"model\":\"claude-haiku-4-5-20251001\",\"id\":\"msg_01BnVamfF7ccY9Qt3nZHAyaG\",\"type\":\"message\",\"role\":\"assistant\",\"content\":[],\"stop_reason\":null,\"stop_sequence\":null,\"stop_details\":null,\"usage\":{\"input_tokens\":543,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":0},\"output_tokens\":40,\"service_tier\":\"standard\",\"inference_geo\":\"not_available\"}}        }\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":0,\"content_block\":{\"type\":\"tool_use\",\"id\":\"toolu_01CzN6riCPqw4pVSuTd9Dwn7\",\"name\":\"pelican_name_generator\",\"input\":{},\"caller\":{\"type\":\"direct\"}}     }\n\nevent: ping\ndata: {\"type\": \"ping\"}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"\"} }\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"index\":0         }\n\nevent: message_delta\ndata: {\"type\":\"message_delta\",\"delta\":{\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"stop_details\":null},\"usage\":{\"input_tokens\":543,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":40}            }\n\nevent: message_stop\ndata: {\"type\":\"message_stop\"             }\n\n"
+}

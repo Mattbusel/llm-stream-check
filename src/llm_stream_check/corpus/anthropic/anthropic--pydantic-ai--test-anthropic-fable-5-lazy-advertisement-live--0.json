@@ -1,0 +1,39 @@
+{
+ "id": "anthropic--pydantic-ai--test-anthropic-fable-5-lazy-advertisement-live--0",
+ "protocol": "anthropic",
+ "provider": "anthropic",
+ "model": "claude-fable-5",
+ "core": true,
+ "source": {
+  "repo": "pydantic/pydantic-ai",
+  "commit": "ebcaf6586c12885ea19f4e63cbe306e7527d00e1",
+  "path": "tests/models/cassettes/test_anthropic/test_anthropic_fable_5_lazy_advertisement_live.yaml",
+  "interaction": 0,
+  "split_from_multi_response_recording": false,
+  "url": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_anthropic/test_anthropic_fable_5_lazy_advertisement_live.yaml"
+ },
+ "features": [
+  "arguments_split_mid_json",
+  "empty_delta",
+  "ping_event",
+  "usage",
+  "usage_restated_in_message_delta"
+ ],
+ "expected": {
+  "tool_calls": [
+   {
+    "id": "toolu_01VrGTSjfvN7qXXcyAGhoGbG",
+    "name": "load_capability",
+    "arguments": {
+     "id": "refunds"
+    }
+   }
+  ],
+  "usage": {
+   "input_tokens": 920,
+   "output_tokens": 50
+  }
+ },
+ "sha256": "f16314fc5fd6312d6cf9f3cf2b5cbb0f82b311fcd9909a82ab84cd344e620936",
+ "body": "event: message_start\ndata: {\"type\":\"message_start\",\"message\":{\"model\":\"claude-fable-5\",\"id\":\"msg_011CfY3oBwaYNUzsFyAKZ4sK\",\"type\":\"message\",\"role\":\"assistant\",\"content\":[],\"container\":null,\"stop_reason\":null,\"stop_sequence\":null,\"stop_details\":null,\"usage\":{\"input_tokens\":920,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":0},\"output_tokens\":17,\"service_tier\":\"standard\",\"inference_geo\":\"global\"},\"diagnostics\":null}   }\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":0,\"content_block\":{\"type\":\"tool_use\",\"id\":\"toolu_01VrGTSjfvN7qXXcyAGhoGbG\",\"name\":\"load_capability\",\"input\":{},\"caller\":{\"type\":\"direct\"}}         }\n\nevent: ping\ndata: {\"type\": \"ping\"}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"\"}             }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"{\\\"id\\\": \"}   }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"\\\"refund\"}     }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"s\\\"}\"}            }\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"index\":0    }\n\nevent: message_delta\ndata: {\"type\":\"message_delta\",\"delta\":{\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"stop_details\":null,\"container\":null},\"usage\":{\"input_tokens\":920,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":50,\"output_tokens_details\":{\"thinking_tokens\":0}}          }\n\nevent: message_stop\ndata: {\"type\":\"message_stop\"            }\n\n"
+}

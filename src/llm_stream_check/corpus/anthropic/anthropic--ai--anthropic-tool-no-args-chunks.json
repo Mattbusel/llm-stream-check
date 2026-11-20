@@ -1,0 +1,38 @@
+{
+ "id": "anthropic--ai--anthropic-tool-no-args-chunks",
+ "protocol": "anthropic",
+ "provider": "anthropic",
+ "model": "claude-sonnet-4-5-20250929",
+ "core": true,
+ "source": {
+  "repo": "vercel/ai",
+  "commit": "beccad37665bbc56afd85542a932e430bdbc4e2e",
+  "path": "packages/anthropic/src/__fixtures__/anthropic-tool-no-args.chunks.txt",
+  "interaction": null,
+  "split_from_multi_response_recording": false,
+  "url": "https://github.com/vercel/ai/blob/beccad37665bbc56afd85542a932e430bdbc4e2e/packages/anthropic/src/__fixtures__/anthropic-tool-no-args.chunks.txt"
+ },
+ "features": [
+  "empty_delta",
+  "ping_event",
+  "tool_call_index_gap",
+  "tool_call_without_arguments",
+  "usage",
+  "usage_restated_in_message_delta"
+ ],
+ "expected": {
+  "tool_calls": [
+   {
+    "id": "toolu_01QE1WLsSVp5hy5Q3GmGTmjP",
+    "name": "updateIssueList",
+    "arguments": {}
+   }
+  ],
+  "usage": {
+   "input_tokens": 565,
+   "output_tokens": 48
+  }
+ },
+ "sha256": "f72684e3bdf54ee3862ccf08db2db8f1296abcc7a5b9112f8f865591b1255e45",
+ "body": "event: message_start\ndata: {\"type\":\"message_start\",\"message\":{\"model\":\"claude-sonnet-4-5-20250929\",\"id\":\"msg_01GE2RKp1VYsPzdFs3sS9z5S\",\"type\":\"message\",\"role\":\"assistant\",\"content\":[],\"stop_reason\":null,\"stop_sequence\":null,\"usage\":{\"input_tokens\":565,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":0},\"output_tokens\":7,\"service_tier\":\"standard\"}}}\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":0,\"content_block\":{\"type\":\"text\",\"text\":\"\"}}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"text_delta\",\"text\":\"I'll update the issue list for\"}}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"text_delta\",\"text\":\" you.\"}}\n\nevent: ping\ndata: {\"type\":\"ping\"}\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"index\":0}\n\nevent: ping\ndata: {\"type\":\"ping\"}\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":1,\"content_block\":{\"type\":\"tool_use\",\"id\":\"toolu_01QE1WLsSVp5hy5Q3GmGTmjP\",\"name\":\"updateIssueList\",\"input\":{}}}\n\nevent: ping\ndata: {\"type\":\"ping\"}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"\"}}\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"index\":1}\n\nevent: message_delta\ndata: {\"type\":\"message_delta\",\"delta\":{\"stop_reason\":\"tool_use\",\"stop_sequence\":null},\"usage\":{\"input_tokens\":565,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":48}}\n\nevent: message_stop\ndata: {\"type\":\"message_stop\"}\n\n"
+}

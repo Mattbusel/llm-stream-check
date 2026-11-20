@@ -1,0 +1,35 @@
+{
+ "id": "openai-chat--ai--mistral-incremental-tool-call-chunks",
+ "protocol": "openai-chat",
+ "provider": "mistral",
+ "model": "zai-glm-5-2",
+ "core": true,
+ "source": {
+  "repo": "vercel/ai",
+  "commit": "beccad37665bbc56afd85542a932e430bdbc4e2e",
+  "path": "packages/mistral/src/__fixtures__/mistral-incremental-tool-call.chunks.txt",
+  "interaction": null,
+  "split_from_multi_response_recording": false,
+  "url": "https://github.com/vercel/ai/blob/beccad37665bbc56afd85542a932e430bdbc4e2e/packages/mistral/src/__fixtures__/mistral-incremental-tool-call.chunks.txt"
+ },
+ "features": [
+  "usage"
+ ],
+ "expected": {
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-9f149c74c42f265b",
+    "name": "webSearchTool",
+    "arguments": {
+     "query": "current Berlin weather"
+    }
+   }
+  ],
+  "usage": {
+   "input_tokens": 171,
+   "output_tokens": 14
+  }
+ },
+ "sha256": "83c0b49c1b1356396de95c295ac3413f7d099722a459dbdac4028ed03ae4d6c2",
+ "body": "data: {\"id\":\"735e434874a24f68a2390b3cab149242\",\"object\":\"chat.completion.chunk\",\"created\":1787234678,\"model\":\"zai-glm-5-2\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"id\":\"chatcmpl-tool-9f149c74c42f265b\",\"type\":\"function\",\"function\":{\"name\":\"webSearchTool\",\"arguments\":\"\"},\"index\":0}],\"index\":0,\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"735e434874a24f68a2390b3cab149242\",\"object\":\"chat.completion.chunk\",\"created\":1787234678,\"model\":\"zai-glm-5-2\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"type\":\"function\",\"function\":{\"name\":\"\",\"arguments\":\"{\\\"query\\\": \\\"current Berlin weather\\\"}\"},\"index\":0}],\"index\":0,\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"735e434874a24f68a2390b3cab149242\",\"object\":\"chat.completion.chunk\",\"created\":1787234678,\"model\":\"zai-glm-5-2\",\"choices\":[{\"index\":0,\"delta\":{\"index\":0,\"content\":\"\"},\"finish_reason\":\"tool_calls\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":171,\"total_tokens\":185,\"completion_tokens\":14,\"prompt_tokens_details\":{\"cached_tokens\":128}}}\n\ndata: [DONE]\n\n"
+}

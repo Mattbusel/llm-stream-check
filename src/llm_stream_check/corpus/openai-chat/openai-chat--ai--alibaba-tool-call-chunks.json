@@ -1,0 +1,38 @@
+{
+ "id": "openai-chat--ai--alibaba-tool-call-chunks",
+ "protocol": "openai-chat",
+ "provider": "alibaba",
+ "model": "qwen3-max",
+ "core": true,
+ "source": {
+  "repo": "vercel/ai",
+  "commit": "beccad37665bbc56afd85542a932e430bdbc4e2e",
+  "path": "packages/alibaba/src/__fixtures__/alibaba-tool-call.chunks.txt",
+  "interaction": null,
+  "split_from_multi_response_recording": false,
+  "url": "https://github.com/vercel/ai/blob/beccad37665bbc56afd85542a932e430bdbc4e2e/packages/alibaba/src/__fixtures__/alibaba-tool-call.chunks.txt"
+ },
+ "features": [
+  "arguments_split_mid_json",
+  "empty_delta",
+  "usage",
+  "usage_only_final_chunk"
+ ],
+ "expected": {
+  "tool_calls": [
+   {
+    "id": "call_eee11723464a4b9eb8cee71d",
+    "name": "weather",
+    "arguments": {
+     "location": "San Francisco"
+    }
+   }
+  ],
+  "usage": {
+   "input_tokens": 295,
+   "output_tokens": 22
+  }
+ },
+ "sha256": "9f58ee213a40c5a0aff92caa8cc07b0bba8445d545149d2d548beb30309a2d9e",
+ "body": "data: {\"choices\":[{\"delta\":{\"content\":null,\"tool_calls\":[{\"index\":0,\"id\":\"call_eee11723464a4b9eb8cee71d\",\"type\":\"function\",\"function\":{\"name\":\"weather\",\"arguments\":\"\"}}],\"role\":\"assistant\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"object\":\"chat.completion.chunk\",\"usage\":null,\"created\":1770764938,\"system_fingerprint\":null,\"model\":\"qwen3-max\",\"id\":\"chatcmpl-8e243c57-23b3-9db2-a02e-e3c53929c368\"}\n\ndata: {\"choices\":[{\"delta\":{\"content\":null,\"tool_calls\":[{\"index\":0,\"id\":\"\",\"type\":\"function\",\"function\":{\"arguments\":\"{\\\"location\\\": \\\"San Francisco\"}}]},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"object\":\"chat.completion.chunk\",\"usage\":null,\"created\":1770764938,\"system_fingerprint\":null,\"model\":\"qwen3-max\",\"id\":\"chatcmpl-8e243c57-23b3-9db2-a02e-e3c53929c368\"}\n\ndata: {\"choices\":[{\"delta\":{\"content\":null,\"tool_calls\":[{\"index\":0,\"id\":\"\",\"type\":\"function\",\"function\":{\"arguments\":\"\\\"}\"}}]},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"object\":\"chat.completion.chunk\",\"usage\":null,\"created\":1770764938,\"system_fingerprint\":null,\"model\":\"qwen3-max\",\"id\":\"chatcmpl-8e243c57-23b3-9db2-a02e-e3c53929c368\"}\n\ndata: {\"choices\":[{\"delta\":{\"tool_calls\":[{\"function\":{\"arguments\":\"\"},\"index\":0,\"id\":\"\",\"type\":\"function\"}]},\"index\":0}],\"object\":\"chat.completion.chunk\",\"usage\":null,\"created\":1770764938,\"system_fingerprint\":null,\"model\":\"qwen3-max\",\"id\":\"chatcmpl-8e243c57-23b3-9db2-a02e-e3c53929c368\"}\n\ndata: {\"choices\":[{\"finish_reason\":\"tool_calls\",\"delta\":{},\"index\":0,\"logprobs\":null}],\"object\":\"chat.completion.chunk\",\"usage\":null,\"created\":1770764938,\"system_fingerprint\":null,\"model\":\"qwen3-max\",\"id\":\"chatcmpl-8e243c57-23b3-9db2-a02e-e3c53929c368\"}\n\ndata: {\"choices\":[],\"object\":\"chat.completion.chunk\",\"usage\":{\"prompt_tokens\":295,\"completion_tokens\":22,\"total_tokens\":317,\"prompt_tokens_details\":{\"cached_tokens\":0}},\"created\":1770764938,\"system_fingerprint\":null,\"model\":\"qwen3-max\",\"id\":\"chatcmpl-8e243c57-23b3-9db2-a02e-e3c53929c368\"}\n\ndata: [DONE]\n\n"
+}

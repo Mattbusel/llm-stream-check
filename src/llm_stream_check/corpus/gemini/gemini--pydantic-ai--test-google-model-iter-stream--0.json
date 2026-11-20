@@ -1,0 +1,35 @@
+{
+ "id": "gemini--pydantic-ai--test-google-model-iter-stream--0",
+ "protocol": "gemini",
+ "provider": "google",
+ "model": "gemini-2.0-flash",
+ "core": true,
+ "source": {
+  "repo": "pydantic/pydantic-ai",
+  "commit": "ebcaf6586c12885ea19f4e63cbe306e7527d00e1",
+  "path": "tests/models/cassettes/test_google/test_google_model_iter_stream.yaml",
+  "interaction": 0,
+  "split_from_multi_response_recording": false,
+  "url": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_google/test_google_model_iter_stream.yaml"
+ },
+ "features": [
+  "usage"
+ ],
+ "expected": {
+  "tool_calls": [
+   {
+    "id": null,
+    "name": "get_capital",
+    "arguments": {
+     "country": "France"
+    }
+   }
+  ],
+  "usage": {
+   "input_tokens": 52,
+   "output_tokens": 5
+  }
+ },
+ "sha256": "fc556a801e08fd5ad22b35f7baec98fa46adaf738c933b3f61f10ad9ddd1a2cf",
+ "body": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"functionCall\": {\"name\": \"get_capital\",\"args\": {\"country\": \"France\"}}}],\"role\": \"model\"},\"finishReason\": \"STOP\"}],\"usageMetadata\": {\"promptTokenCount\": 52,\"candidatesTokenCount\": 5,\"totalTokenCount\": 57,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 52}],\"candidatesTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 5}]},\"modelVersion\": \"gemini-2.0-flash\",\"responseId\": \"1lpeaMTxIpW1nvgP-O3vwQY\"}\r\n\r\n"
+}

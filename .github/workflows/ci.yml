@@ -1,0 +1,25 @@
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.10", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: pip install -e . pytest ruff mypy
+      - run: ruff check src tests tools
+      - run: ruff format --check src tests tools
+      - if: matrix.python == '3.12'
+        run: mypy
+      - run: pytest -q
+      - run: llm-stream-check run --adapter reference

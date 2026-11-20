@@ -1,0 +1,37 @@
+{
+ "id": "gemini--pydantic-ai--test-native-output-with-function-tools-stream--0",
+ "protocol": "gemini",
+ "provider": "google",
+ "model": "gemini-3-flash-preview",
+ "core": true,
+ "source": {
+  "repo": "pydantic/pydantic-ai",
+  "commit": "ebcaf6586c12885ea19f4e63cbe306e7527d00e1",
+  "path": "tests/models/google/cassettes/test_structured_output/test_native_output_with_function_tools_stream.yaml",
+  "interaction": 0,
+  "split_from_multi_response_recording": false,
+  "url": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/google/cassettes/test_structured_output/test_native_output_with_function_tools_stream.yaml"
+ },
+ "features": [
+  "thought_signature",
+  "tool_call_without_arguments",
+  "usage",
+  "usage_only_final_chunk"
+ ],
+ "expected": {
+  "tool_calls": [
+   {
+    "id": "96c1su3s",
+    "name": "get_user_country",
+    "arguments": {}
+   }
+  ],
+  "usage": {
+   "input_tokens": 29,
+   "output_tokens": 12,
+   "output_tokens_alt": 81
+  }
+ },
+ "sha256": "b4dffb74aa527a6865a0c59eb8be849ac617684a9545415a9aa3e18fcf131277",
+ "body": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"functionCall\": {\"name\": \"get_user_country\",\"args\": {},\"id\": \"96c1su3s\"},\"thoughtSignature\": \"EpIDCo8DAQw51scL+dHffCC+bznOIyXjDPleN5yQL1zqs+4M/VtZCHcJrN8gh786ZjK9OZKuD6RdZHgfpv79cXyMPcENDzPM2VrQF0ZLkLBwpq98X6zkYNVkwocL/mdRCLNt7H+Stxu1kojfyFhLSEYUx2w5Ep0gOuF2lOdXs9nG0j5qO0osghTXqDz2AUUbinuJ4bX/34maQqECBO4g58rN+8/bKW1CW2CWWtJfSsfVNLutBS/NpJ/REk3cm3RT3viJU9YdruAMAC9K95vW5gGPkFbZ4weFTplNS9FBUjue7usTmrYTH0P+59L3xdXkn0X0QMHt1ACkOOl84cIscvYukdz9AC+a56q2kZPNEHxfHudLT5kbuYzL9ujEmJ79YWOG2cFfS2yjBXinkM6mjxraEXzt4sc1kOI2c37TGqlsFZH9UIRoNUm60rl5ligkxyDyGgrFXoVdEAPuM42SUr6KkhdOnR4Kjxf9vsqMaXUX2Br5ZyyRT1/PZBCnPSxe1bq7eTqAtvGUQJoG9L0tnpbDR9Eg\"}],\"role\": \"model\"},\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 29,\"candidatesTokenCount\": 12,\"totalTokenCount\": 110,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 29}],\"thoughtsTokenCount\": 69},\"modelVersion\": \"gemini-3-flash-preview\",\"responseId\": \"g1P6aZnMMZq5qtsPj9fyuQ8\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"\"}],\"role\": \"model\"},\"finishReason\": \"STOP\",\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 29,\"candidatesTokenCount\": 12,\"totalTokenCount\": 110,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 29}],\"thoughtsTokenCount\": 69},\"modelVersion\": \"gemini-3-flash-preview\",\"responseId\": \"g1P6aZnMMZq5qtsPj9fyuQ8\"}\r\n\r\n"
+}

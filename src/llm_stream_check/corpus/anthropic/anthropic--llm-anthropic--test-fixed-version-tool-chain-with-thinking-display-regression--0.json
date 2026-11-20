@@ -1,0 +1,39 @@
+{
+ "id": "anthropic--llm-anthropic--test-fixed-version-tool-chain-with-thinking-display-regression--0",
+ "protocol": "anthropic",
+ "provider": "anthropic",
+ "model": "claude-haiku-4-5-20251001",
+ "core": true,
+ "source": {
+  "repo": "simonw/llm-anthropic",
+  "commit": "30d4d939c4b48b45115c2c1a95332d1d0688277c",
+  "path": "tests/cassettes/test_anthropic/test_fixed_version_tool_chain_with_thinking_display_regression.yaml",
+  "interaction": 0,
+  "split_from_multi_response_recording": false,
+  "url": "https://github.com/simonw/llm-anthropic/blob/30d4d939c4b48b45115c2c1a95332d1d0688277c/tests/cassettes/test_anthropic/test_fixed_version_tool_chain_with_thinking_display_regression.yaml"
+ },
+ "features": [
+  "empty_delta",
+  "ping_event",
+  "thinking_block",
+  "tool_call_index_gap",
+  "tool_call_without_arguments",
+  "usage",
+  "usage_restated_in_message_delta"
+ ],
+ "expected": {
+  "tool_calls": [
+   {
+    "id": "toolu_01825dXWLSoJwCst1qTsiWdb",
+    "name": "fixed_version",
+    "arguments": {}
+   }
+  ],
+  "usage": {
+   "input_tokens": 598,
+   "output_tokens": 92
+  }
+ },
+ "sha256": "40e1294e764db40ce75dcfcb9421aa38b2cda407a1aeba56a0c4e10cd830f117",
+ "body": "event: message_start\ndata: {\"type\":\"message_start\",\"message\":{\"model\":\"claude-haiku-4-5-20251001\",\"id\":\"msg_01JdU4xqNHXL9QCFWkwCDKGr\",\"type\":\"message\",\"role\":\"assistant\",\"content\":[],\"stop_reason\":null,\"stop_sequence\":null,\"stop_details\":null,\"usage\":{\"input_tokens\":598,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":0},\"output_tokens\":8,\"service_tier\":\"standard\",\"inference_geo\":\"not_available\"}}             }\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":0,\"content_block\":{\"type\":\"thinking\",\"thinking\":\"\",\"signature\":\"\"}  }\n\nevent: ping\ndata: {\"type\": \"ping\"}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\"The user wants me to:\\n1\"}         }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\". Use the fixed_version tool\\n2. Tell them the version\\n3. Make a short joke about it\\n\\nLet me first call the fixed_version tool to see what version it returns.\"}               }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\"\"}             }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"signature_delta\",\"signature\":\"EoQDCm0IDhgCKkCDzGs2kL2PgnDCZU/nM2wG2P1VIXCRHVnhDDzBQxNF1fl4QBXEKLxRItNJ2MwFdW9eeZPhsxSQIxD54cv3zs29MhljbGF1ZGUtaGFpa3UtNC01LTIwMjUxMDAxOABCCHRoaW5raW5nEgy/OWlwTmmqUjC6L70aDJ4P0R5NfuIe9U5zAiIwCxPduXS2UxCNxJCee3i91qK3cAyAgxCjL2wkQ5UD56iX1hXGOyuNaiH5k+dF5OCQKsQBxiAo+NjC61hV8nRYtaiP+C4inOcuMKuTG9Z1rysxTXkKBTl3oMiOlnEPHHPpKpg4sYF2G5VoTg8JTon20hdZw4GfTEVupnU1qAmnMqyAgke9SoV7HBW/PyA/FxL/q33xJ2gKFiD+BsgI9Z0koMmFKCvm2MoYE6u+ONEwKdFQXL1FKRW6t/bYbJGrLJLwxilsL82h9j4xjggjMn8Npvpn+zsrDPW/8PuLd4Pu+/EsjoneYwyxQQtUVgzhVGhhANWRjSBwUxgB\"}               }\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"index\":0           }\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":1,\"content_block\":{\"type\":\"tool_use\",\"id\":\"toolu_01825dXWLSoJwCst1qTsiWdb\",\"name\":\"fixed_version\",\"input\":{},\"caller\":{\"type\":\"direct\"}}             }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"\"}             }\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"index\":1       }\n\nevent: message_delta\ndata: {\"type\":\"message_delta\",\"delta\":{\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"stop_details\":null},\"usage\":{\"input_tokens\":598,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":92,\"output_tokens_details\":{\"thinking_tokens\":53}}}\n\nevent: message_stop\ndata: {\"type\":\"message_stop\"    }\n\n"
+}

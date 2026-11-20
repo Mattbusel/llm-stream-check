@@ -1,0 +1,39 @@
+{
+ "id": "anthropic--pydantic-ai--test-cross-provider-capability-replay-google-gemini-3-flash-preview-anthropic-claude-s--0",
+ "protocol": "anthropic",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5-5",
+ "core": true,
+ "source": {
+  "repo": "pydantic/pydantic-ai",
+  "commit": "ebcaf6586c12885ea19f4e63cbe306e7527d00e1",
+  "path": "tests/cassettes/test_tool_search/test_cross_provider_capability_replay[google-gemini-3-flash-preview-anthropic-claude-sonnet-5-5].yaml",
+  "interaction": 0,
+  "split_from_multi_response_recording": false,
+  "url": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/cassettes/test_tool_search/test_cross_provider_capability_replay[google-gemini-3-flash-preview-anthropic-claude-sonnet-5-5].yaml"
+ },
+ "features": [
+  "arguments_split_mid_json",
+  "empty_delta",
+  "ping_event",
+  "usage",
+  "usage_restated_in_message_delta"
+ ],
+ "expected": {
+  "tool_calls": [
+   {
+    "id": "toolu_01JCAyUzRTHCMztiNz3qN1Ln",
+    "name": "lookup_refund_policy",
+    "arguments": {
+     "order_id": "order-456"
+    }
+   }
+  ],
+  "usage": {
+   "input_tokens": 984,
+   "output_tokens": 57
+  }
+ },
+ "sha256": "a288f2c3f752214f37906b70d67af3f17abaa9bea565d075ef85f184bd9a6e41",
+ "body": "event: message_start\ndata: {\"type\":\"message_start\",\"message\":{\"model\":\"claude-sonnet-5-5\",\"id\":\"msg_011CgPJ5fubAB5WeK7HnQocG\",\"type\":\"message\",\"role\":\"assistant\",\"content\":[],\"container\":null,\"stop_reason\":null,\"stop_sequence\":null,\"stop_details\":null,\"usage\":{\"input_tokens\":984,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":0},\"output_tokens\":24,\"service_tier\":\"standard\",\"inference_geo\":\"global\",\"speed\":\"standard\"},\"diagnostics\":null}    }\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":0,\"content_block\":{\"type\":\"tool_use\",\"id\":\"toolu_01JCAyUzRTHCMztiNz3qN1Ln\",\"name\":\"lookup_refund_policy\",\"input\":{},\"caller\":{\"type\":\"direct\"}}            }\n\nevent: ping\ndata: {\"type\": \"ping\"}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"\"}             }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"{\\\"order\"}  }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"_id\\\": \\\"\"}           }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"order-4\"}  }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"56\\\"}\"}              }\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"index\":0      }\n\nevent: message_delta\ndata: {\"type\":\"message_delta\",\"delta\":{\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"stop_details\":null,\"container\":null},\"usage\":{\"input_tokens\":984,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":57,\"output_tokens_details\":{\"thinking_tokens\":0}}   }\n\nevent: message_stop\ndata: {\"type\":\"message_stop\"          }\n\n"
+}

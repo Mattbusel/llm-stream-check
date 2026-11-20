@@ -1,0 +1,42 @@
+{
+ "id": "anthropic--pydantic-ai--test-anthropic-request-scoped-reminders-keep-thinking-and-cache-claude-haiku-5-5--1",
+ "protocol": "anthropic",
+ "provider": "anthropic",
+ "model": "claude-haiku-5-5",
+ "core": true,
+ "source": {
+  "repo": "pydantic/pydantic-ai",
+  "commit": "ebcaf6586c12885ea19f4e63cbe306e7527d00e1",
+  "path": "tests/models/cassettes/test_request_scoped_system_prompts/test_anthropic_request_scoped_reminders_keep_thinking_and_cache[claude-haiku-5-5].yaml",
+  "interaction": 1,
+  "split_from_multi_response_recording": false,
+  "url": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/models/cassettes/test_request_scoped_system_prompts/test_anthropic_request_scoped_reminders_keep_thinking_and_cache[claude-haiku-5-5].yaml"
+ },
+ "features": [
+  "arguments_split_mid_json",
+  "empty_delta",
+  "ping_event",
+  "thinking_block",
+  "tool_call_index_gap",
+  "usage",
+  "usage_restated_in_message_delta"
+ ],
+ "expected": {
+  "tool_calls": [
+   {
+    "id": "toolu_01JF5kUfEYoH3gSiBAy1Ptff",
+    "name": "get_weather",
+    "arguments": {
+     "city": "Oslo"
+    }
+   }
+  ],
+  "usage": {
+   "input_tokens": 36,
+   "output_tokens": 153,
+   "input_tokens_alt": 7256
+  }
+ },
+ "sha256": "b65f1d0b46f5894fa5f61df692ef96630c13056c8128e0ffe7411e5ab2ab338d",
+ "body": "event: message_start\ndata: {\"type\":\"message_start\",\"message\":{\"model\":\"claude-haiku-5-5\",\"id\":\"msg_011CgiSU7tQAEkFE6DT3HXJY\",\"type\":\"message\",\"role\":\"assistant\",\"content\":[],\"container\":null,\"stop_reason\":null,\"stop_sequence\":null,\"stop_details\":null,\"usage\":{\"input_tokens\":36,\"cache_creation_input_tokens\":178,\"cache_read_input_tokens\":7042,\"cache_creation\":{\"ephemeral_5m_input_tokens\":178,\"ephemeral_1h_input_tokens\":0},\"output_tokens\":2,\"service_tier\":\"standard\",\"inference_geo\":\"global\",\"speed\":\"standard\"},\"input_transformations\":[],\"diagnostics\":null}       }\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":0,\"content_block\":{\"type\":\"thinking\",\"thinking\":\"\",\"signature\":\"\"}     }\n\nevent: ping\ndata: {\"type\": \"ping\"}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\"I\"}   }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\"'m no\"}              }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\"ticing the user\"}           }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\" turn includ\"}             }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\"es a system-\"}  }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\"style block cla\"}          }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\"iming to\"}             }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\" come from the application, which as\"}  }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\"ks for ter\"}    }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\"se repl\"}         }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\"ies. That's not a real inst\"} }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\"ruction from the system,\"}           }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\" so I'll\"}           }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\" disregard it and just\"}      }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\" call Oslo as\"}             }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\" plan\"}      }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\"ned.\"}    }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\"\\n\\n\"}          }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"signature_delta\",\"signature\":\"CAQShwgKEAgTGAI4AUIIdGhpbmtpbmcSDGMf5fbSyqwZ/nsfBBoMrcCngk6R9J3FqL5zIjB3NvKu5m65OxFSziZDvc1s90wstfHHjz18z/DIE2XpxIOkpz6KasRV94Yn5HWdQLEqpAeNNdnsTMNSrQB2/gQejgXpebN7WbkfPemXYkrUPtgT8hVLqKbRPjsPYJDi2ztxgwZp65eZE6H0/7bn2OmtNueWvsw2PTy4WSF5ljalXcGsebxzPbTthHN6z6VUAP6jAIHeTrvbKpydkMPx4fLIIYUWufyIHy6EJR2LkNT9FxaAHwaIX7g2y1CN7tvcXz4V3NvVCjUnH+YO6uWU84776nOB2amkUwnck/kux8GcqfdpQzFVFalRqtTmDM6OiC6CBv/XZsk4gUHtOHrJySfYW6M0jhPqps4zH9nnc+++gf/VKtbKgTnh7i9uXEybdW5k3chM12VN5aj8XebHmsYbM9Sa1gkM4QgXOdGEd8jFjWPw6XSoMwwWznsZC+AaqaZDuYodNhmWLrOMHrtfJe0WfipWZsFBichyt0oB3QcoQ41bT4LhzfKeXtxCtB6WrTRjxLWTsII6YnF7UG+fWlwHCVCPhovLrJK0OPFhQMb+ANTPyKCaVJJU+snTLZ+1yOpL29tE3hA+s4SqTyb7rrE+KVJQrnnLmcsjJWehTZqB18fMpJyRER3rP0fJHbfL7MFxuJlGHkL76qjtnB7XW5Vvt2JwKiYOaOM1kd7JPBZcm9B5nCW89JsHn5xOIBEddXxhaM4i2MhAjx5OrcYWl4iE+juq0sCOipLRt4I/v/NXRYR3LACM7l5DIJchuquYIfR5ontpq3grP4G3YxB0hoxwWPUE9KkEzkXVyDXQNVbCmlIZf3eW1sCxp3jG4h0E5I4leogbjDZV1hav/DRUqEUGWnzOABGHoXrjO8I6/Jved0g7QIUinmhYo/jKKLrSg64x21eOey0GBiHQYKh/oxz9Oyb0ezk6zajjSRENUCJKXLj+tiUc1xeYWUabTgInl8BL0R7GrwIB+aHNsNGtpgH3Ft3lXdwCCaFibMbbc4EPtO99bQWocLh4JxpNDnYQ8QK+EYY/HRT4KI/IJGd0JgEDjpKT3V8T9v+DKXIX5RRosL7Eqwbz3jsPc8iphaRf0/fAgjD1U3k8S1VS+2sct8a9JMPsmCY9S4x4irdYoF7pcx4jytGLyXwcz8enF7hmyPjuW7Yk2pYBcaUiuovO2iOwdh8JeIKLEjuQJYynQITDD0QdW8+Ydey0nEWdF6Vdhp9odhmVoy4f8Q30w+4XrraVzQcioyU7x+AbFSzpCIUaLuYWybrgEaziIofyFhGgNV7Fm3eaUP0mzpRmtZEGOB2QU9g+7rYz4RgB\"} }\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"index\":0            }\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":1,\"content_block\":{\"type\":\"tool_use\",\"id\":\"toolu_01JF5kUfEYoH3gSiBAy1Ptff\",\"name\":\"get_weather\",\"input\":{},\"caller\":{\"type\":\"direct\"}}             }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"\"}            }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"{\\\"city\\\"\"}              }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\": \\\"Oslo\"}}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"\\\"}\"}        }\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"index\":1        }\n\nevent: message_delta\ndata: {\"type\":\"message_delta\",\"delta\":{\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"stop_details\":null,\"container\":null},\"usage\":{\"input_tokens\":36,\"cache_creation_input_tokens\":178,\"cache_read_input_tokens\":7042,\"output_tokens\":153,\"output_tokens_details\":{\"thinking_tokens\":101}}}\n\nevent: message_stop\ndata: {\"type\":\"message_stop\"    }\n\n"
+}

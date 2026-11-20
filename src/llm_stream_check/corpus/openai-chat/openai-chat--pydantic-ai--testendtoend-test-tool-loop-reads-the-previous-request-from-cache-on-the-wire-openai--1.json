@@ -1,0 +1,38 @@
+{
+ "id": "openai-chat--pydantic-ai--testendtoend-test-tool-loop-reads-the-previous-request-from-cache-on-the-wire-openai--1",
+ "protocol": "openai-chat",
+ "provider": "openai",
+ "model": "gpt-5.6-sol",
+ "core": true,
+ "source": {
+  "repo": "pydantic/pydantic-ai",
+  "commit": "ebcaf6586c12885ea19f4e63cbe306e7527d00e1",
+  "path": "tests/harness/planning/cassettes/test_planning/TestEndToEnd.test_tool_loop_reads_the_previous_request_from_cache_on_the_wire[openai].yaml",
+  "interaction": 1,
+  "split_from_multi_response_recording": false,
+  "url": "https://github.com/pydantic/pydantic-ai/blob/ebcaf6586c12885ea19f4e63cbe306e7527d00e1/tests/harness/planning/cassettes/test_planning/TestEndToEnd.test_tool_loop_reads_the_previous_request_from_cache_on_the_wire[openai].yaml"
+ },
+ "features": [
+  "arguments_split_mid_json",
+  "empty_delta",
+  "usage",
+  "usage_only_final_chunk"
+ ],
+ "expected": {
+  "tool_calls": [
+   {
+    "id": "call_u7Vq0xUWOuzT8ZxcDSWMs9M3",
+    "name": "read_section",
+    "arguments": {
+     "n": 1
+    }
+   }
+  ],
+  "usage": {
+   "input_tokens": 837,
+   "output_tokens": 17
+  }
+ },
+ "sha256": "9548b1e14b6f0e281b4b7eabf2d1b0617c4ef570cfcf4f22fd178190096e0f1e",
+ "body": "data: {\"id\":\"chatcmpl-Edjl5drjOAojUDA7PF4oWjktskcXB\",\"object\":\"chat.completion.chunk\",\"created\":1793139395,\"model\":\"gpt-5.6-sol\",\"service_tier\":\"default\",\"system_fingerprint\":null,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":null,\"tool_calls\":[{\"index\":0,\"id\":\"call_u7Vq0xUWOuzT8ZxcDSWMs9M3\",\"type\":\"function\",\"function\":{\"name\":\"read_section\",\"arguments\":\"\"}}],\"refusal\":null},\"finish_reason\":null}],\"usage\":null,\"obfuscation\":\"0QTSQyAjW\"}\n\ndata: {\"id\":\"chatcmpl-Edjl5drjOAojUDA7PF4oWjktskcXB\",\"object\":\"chat.completion.chunk\",\"created\":1793139395,\"model\":\"gpt-5.6-sol\",\"service_tier\":\"default\",\"system_fingerprint\":null,\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"{\\\"\"}}]},\"finish_reason\":null}],\"usage\":null,\"obfuscation\":\"cXi9\"}\n\ndata: {\"id\":\"chatcmpl-Edjl5drjOAojUDA7PF4oWjktskcXB\",\"object\":\"chat.completion.chunk\",\"created\":1793139395,\"model\":\"gpt-5.6-sol\",\"service_tier\":\"default\",\"system_fingerprint\":null,\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"n\"}}]},\"finish_reason\":null}],\"usage\":null,\"obfuscation\":\"drijFh\"}\n\ndata: {\"id\":\"chatcmpl-Edjl5drjOAojUDA7PF4oWjktskcXB\",\"object\":\"chat.completion.chunk\",\"created\":1793139395,\"model\":\"gpt-5.6-sol\",\"service_tier\":\"default\",\"system_fingerprint\":null,\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"\\\":\"}}]},\"finish_reason\":null}],\"usage\":null,\"obfuscation\":\"TMkH\"}\n\ndata: {\"id\":\"chatcmpl-Edjl5drjOAojUDA7PF4oWjktskcXB\",\"object\":\"chat.completion.chunk\",\"created\":1793139395,\"model\":\"gpt-5.6-sol\",\"service_tier\":\"default\",\"system_fingerprint\":null,\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"1\"}}]},\"finish_reason\":null}],\"usage\":null,\"obfuscation\":\"QAV17b\"}\n\ndata: {\"id\":\"chatcmpl-Edjl5drjOAojUDA7PF4oWjktskcXB\",\"object\":\"chat.completion.chunk\",\"created\":1793139395,\"model\":\"gpt-5.6-sol\",\"service_tier\":\"default\",\"system_fingerprint\":null,\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"}\"}}]},\"finish_reason\":null}],\"usage\":null,\"obfuscation\":\"yak9PK\"}\n\ndata: {\"id\":\"chatcmpl-Edjl5drjOAojUDA7PF4oWjktskcXB\",\"object\":\"chat.completion.chunk\",\"created\":1793139395,\"model\":\"gpt-5.6-sol\",\"service_tier\":\"default\",\"system_fingerprint\":null,\"choices\":[{\"index\":0,\"delta\":{},\"finish_reason\":\"tool_calls\"}],\"usage\":null,\"obfuscation\":\"gt1NV\"}\n\ndata: {\"id\":\"chatcmpl-Edjl5drjOAojUDA7PF4oWjktskcXB\",\"object\":\"chat.completion.chunk\",\"created\":1793139395,\"model\":\"gpt-5.6-sol\",\"service_tier\":\"default\",\"system_fingerprint\":null,\"choices\":[],\"usage\":{\"prompt_tokens\":837,\"completion_tokens\":17,\"total_tokens\":854,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"audio_tokens\":0,\"accepted_prediction_tokens\":0,\"rejected_prediction_tokens\":0}},\"obfuscation\":\"G0XNxxs\"}\n\ndata: [DONE]\n\n"
+}
